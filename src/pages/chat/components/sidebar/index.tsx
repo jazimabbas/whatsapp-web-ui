@@ -1,6 +1,8 @@
 import Icon from "common/components/icons";
 import styled from "styled-components";
 import OptionsMenu from "../option-menu";
+import SidebarAlert from "./alert";
+import SearchField from "../search-field";
 
 const SidebarContainer = styled.aside`
   min-width: 300px;
@@ -93,6 +95,8 @@ export default function Sidebar() {
           />
         </Actions>
       </Header>
+      <SidebarAlert />
+      <SearchField />
     </SidebarContainer>
   );
 }
