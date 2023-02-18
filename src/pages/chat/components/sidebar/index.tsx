@@ -1,5 +1,6 @@
 import Icon from "common/components/icons";
 import styled from "styled-components";
+import OptionsMenu from "../option-menu";
 
 const SidebarContainer = styled.aside`
   min-width: 300px;
@@ -36,7 +37,6 @@ const Header = styled.header`
   align-items: center;
   height: 60px;
   padding: 10px;
-  /* Fix for height bug with chat sidebar */
   min-height: 60px;
 `;
 
@@ -76,6 +76,21 @@ export default function Sidebar() {
           <button className="sidebar__action" aria-label="New chat">
             <Icon id="chat" className="icon" />
           </button>
+          <OptionsMenu
+            iconClassName="icon"
+            className="icon"
+            ariaLabel="Menu"
+            iconId="menu"
+            options={[
+              "New group",
+              "Create a room",
+              "Profile",
+              "Archived",
+              "Starred",
+              "Settings",
+              "Log out",
+            ]}
+          />
         </Actions>
       </Header>
     </SidebarContainer>
