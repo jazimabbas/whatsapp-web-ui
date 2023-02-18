@@ -57,7 +57,6 @@ export default function SidebarAlert() {
           </Text>
         </TextContainer>
       </AlertContainer>
-      ,
     </>
   );
 }

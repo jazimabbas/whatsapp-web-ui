@@ -3,6 +3,7 @@ import styled from "styled-components";
 import OptionsMenu from "../option-menu";
 import SidebarAlert from "./alert";
 import SearchField from "../search-field";
+import InboxContact from "./contacts";
 
 const SidebarContainer = styled.aside`
   min-width: 300px;
@@ -64,6 +65,13 @@ const Actions = styled.div`
   }
 `;
 
+const ContactContainer = styled.div`
+  flex: 1;
+  overflow-y: scroll;
+  background: #f5f5f5;
+  border-top: 1px solid #dadada;
+`;
+
 export default function Sidebar() {
   return (
     <SidebarContainer>
@@ -97,6 +105,13 @@ export default function Sidebar() {
       </Header>
       <SidebarAlert />
       <SearchField />
+      <ContactContainer>
+        <InboxContact />
+        <InboxContact />
+        <InboxContact />
+        <InboxContact />
+        <InboxContact />
+      </ContactContainer>
     </SidebarContainer>
   );
 }
