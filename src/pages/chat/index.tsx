@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Sidebar from "./components/sidebar";
 
 export const App = styled.div`
   width: 100%;
@@ -8,7 +9,7 @@ export const App = styled.div`
 
   &::before {
     width: 100%;
-    height: 120px;
+    /* height: 120px; */
     top: 0;
     left: 0;
     background: rgb(0, 150, 136);
@@ -57,7 +58,9 @@ export default function ChatPage() {
   return (
     <App>
       <Message> Only available on desktop 😊. </Message>
-      <Content>WhatsApp</Content>
+      <Content>
+        <Sidebar />
+      </Content>
     </App>
   );
 }
