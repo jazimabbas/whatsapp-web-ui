@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Header from "./header";
+import MessagesList from "./messages-list";
 
 const Container = styled.div`
   display: flex;
@@ -33,6 +34,7 @@ export default function ChatRoom() {
       <Body>
         <Background />
         <Header />
+        <MessagesList />
       </Body>
     </Container>
   );
