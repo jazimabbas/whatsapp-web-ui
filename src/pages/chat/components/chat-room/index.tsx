@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Header from "./header";
 import MessagesList from "./messages-list";
+import Icon from "common/components/icons";
 
 const Container = styled.div`
   display: flex;
@@ -28,6 +29,28 @@ const Background = styled.div`
   background: url("/assets/images/bg-chat-room-light.png") #e4dcd4;
 `;
 
+const FooterContainer = styled.div`
+  background: rgb(240, 240, 240);
+  position: relative;
+`;
+
+const ScrollButton = styled.button`
+  position: absolute;
+  right: 15px;
+  bottom: 80px;
+  width: 42px;
+  height: 42px;
+  z-index: -1;
+  border-radius: 50%;
+  color: rgb(145, 145, 145);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  z-index: 10;
+`;
+
 export default function ChatRoom() {
   return (
     <Container>
@@ -35,6 +58,11 @@ export default function ChatRoom() {
         <Background />
         <Header />
         <MessagesList />
+        <FooterContainer>
+          <ScrollButton>
+            <Icon id="downArrow" />
+          </ScrollButton>
+        </FooterContainer>
       </Body>
     </Container>
   );

@@ -17,7 +17,7 @@ const Container = styled.div`
 `;
 
 const wrapperStyles = css`
-  /* z-index: 10; */
+  z-index: 9;
 `;
 
 const DateWrapper = styled.div`
@@ -168,7 +168,20 @@ export default function MessagesList() {
           <ChatMessageFiller />
           <ChatMessageFooter>08:57</ChatMessageFooter>
         </ChatMessage>
-        <ChatMessage className="chat__msg--sent">
+
+        <Messages />
+      </MessageGroup>
+    </Container>
+  );
+}
+
+function Messages() {
+  const messages = Array.from(Array(10).keys());
+
+  return (
+    <>
+      {messages.map((msg) => (
+        <ChatMessage className="chat__msg--sent" key={msg}>
           <span>Testing ...</span>
           <ChatMessageFiller />
           <ChatMessageFooter>
@@ -176,7 +189,7 @@ export default function MessagesList() {
             <Icon id="doubleTick" className="chat__msg-status-icon chat__msg-status-icon--blue" />
           </ChatMessageFooter>
         </ChatMessage>
-      </MessageGroup>
-    </Container>
+      ))}
+    </>
   );
 }
