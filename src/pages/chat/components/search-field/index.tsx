@@ -66,16 +66,23 @@ const Input = styled.input`
   }
 `;
 
-export default function SearchField() {
+type SearchFieldProps = {
+  placeholder?: string;
+  [x: string]: any;
+};
+
+export default function SearchField(props: SearchFieldProps) {
+  const { placeholder, ...rest } = props;
+
   return (
-    <SearchWrapper>
+    <SearchWrapper {...rest}>
       <IconContainer>
         <Icon id="search" className="search-icon" />
         <button className="search__back-btn">
           <Icon id="back" />
         </button>
       </IconContainer>
-      <Input placeholder="Search or start a new chat" />
+      <Input placeholder={placeholder ?? "Search or start a new chat"} />
     </SearchWrapper>
   );
 }
