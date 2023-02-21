@@ -54,6 +54,33 @@ const Button = styled.button<{ readonly showIcon: boolean }>`
   }
 `;
 
+const Input = styled.input`
+  background: white;
+  color: rgb(74, 74, 74);
+  padding: 20px 10px;
+  border-radius: 22px;
+  flex: 1;
+  height: 100%;
+  margin-left: 7px;
+
+  &::placeholder {
+    color: rgb(153, 153, 153);
+    font-size: 0.9rem;
+  }
+`;
+
+const SendMessageButton = styled.button`
+  .icon {
+    color: #919191;
+    margin-left: 8px;
+    margin-right: 8px;
+    width: 28px;
+    height: 28px;
+    padding: 3px;
+    border-radius: 50%;
+  }
+`;
+
 const attachButtons = [
   { icon: "attachRooms", label: "Choose room" },
   { icon: "attachContacts", label: "Choose contact" },
@@ -79,6 +106,10 @@ export default function Footer() {
           ))}
         </ButtonsContainer>
       </IconsWrapper>
+      <Input placeholder="Type a message here .." />
+      <SendMessageButton>
+        <Icon id="send" className="icon" />
+      </SendMessageButton>
     </Wrapper>
   );
 }
