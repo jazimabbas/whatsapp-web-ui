@@ -82,11 +82,15 @@ const actionStyles = css`
   cursor: pointer;
 `;
 
-const Action = styled.button`
+const Action = styled.button<any>`
   ${actionStyles}
 `;
 
-export default function Header() {
+type HeaderProps = {
+  onSearchClick: Function;
+};
+
+export default function Header(props: HeaderProps) {
   return (
     <Container>
       <AvatarWrapper>
@@ -97,7 +101,7 @@ export default function Header() {
         <Subtitle>online</Subtitle>
       </ProfileWrapper>
       <Actions>
-        <Action>
+        <Action onClick={props.onSearchClick}>
           <Icon id="search" className="icon search-icon" />
         </Action>
         <OptionsMenu

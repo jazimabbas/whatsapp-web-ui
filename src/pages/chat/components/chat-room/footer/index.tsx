@@ -1,6 +1,6 @@
 import Icon from "common/components/icons";
 import { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Wrapper = styled.div`
   /* should be refactor to one wrapper. using multiple places */
@@ -12,12 +12,20 @@ const Wrapper = styled.div`
   /* should be refactor to one wrapper. using multiple places */
 `;
 
+const iconCommonStyles = css`
+  color: #919191;
+`;
+
 const IconsWrapper = styled.div`
   position: relative;
 `;
 
 const AttachButton = styled.button`
   margin-left: 10px;
+
+  .icon {
+    ${iconCommonStyles}
+  }
 `;
 
 const ButtonsContainer = styled.div`
@@ -38,7 +46,7 @@ const Button = styled.button<{ readonly showIcon: boolean }>`
   }
 
   &:nth-of-type(2) {
-    transition-delay: 0.2s;
+    transition-delay: 0.20s;
   }
 
   &:nth-of-type(3) {
@@ -46,7 +54,7 @@ const Button = styled.button<{ readonly showIcon: boolean }>`
   }
 
   &:nth-of-type(4) {
-    transition-delay: 0.1s;
+    transition-delay: 0.10s;
   }
 
   &:nth-of-type(5) {
@@ -71,13 +79,13 @@ const Input = styled.input`
 
 const SendMessageButton = styled.button`
   .icon {
-    color: #919191;
     margin-left: 8px;
     margin-right: 8px;
     width: 28px;
     height: 28px;
     padding: 3px;
     border-radius: 50%;
+    ${iconCommonStyles}
   }
 `;
 
@@ -96,7 +104,7 @@ export default function Footer() {
     <Wrapper>
       <IconsWrapper>
         <AttachButton onClick={() => setShowIcons(!showIcons)}>
-          <Icon id="attach" />
+          <Icon id="attach" className="icon" />
         </AttachButton>
         <ButtonsContainer>
           {attachButtons.map((btn) => (

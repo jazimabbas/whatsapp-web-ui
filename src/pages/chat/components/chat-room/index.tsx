@@ -3,6 +3,8 @@ import Header from "./header";
 import MessagesList from "./messages-list";
 import Icon from "common/components/icons";
 import Footer from "./footer";
+import Sidebar from "./sidebar";
+import { useState } from "react";
 
 const Container = styled.div`
   display: flex;
@@ -54,11 +56,13 @@ const ScrollButton = styled.button`
 `;
 
 export default function ChatRoom() {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
   return (
     <Container>
       <Body>
         <Background />
-        <Header />
+        <Header onSearchClick={() => setIsSearchOpen(true)} />
         <MessagesList />
         <FooterContainer>
           <ScrollButton>
@@ -67,6 +71,7 @@ export default function ChatRoom() {
           <Footer />
         </FooterContainer>
       </Body>
+      <Sidebar title="Search" isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </Container>
   );
 }
