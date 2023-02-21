@@ -33,6 +33,7 @@ const Background = styled.div`
 const FooterContainer = styled.div`
   background: rgb(240, 240, 240);
   position: relative;
+  z-index: 1;
 `;
 
 const ScrollButton = styled.button`
