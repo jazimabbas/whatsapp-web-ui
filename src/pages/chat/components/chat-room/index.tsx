@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Header from "./header";
 import MessagesList from "./messages-list";
 import Icon from "common/components/icons";
+import Footer from "./footer";
 
 const Container = styled.div`
   display: flex;
@@ -62,6 +63,7 @@ export default function ChatRoom() {
           <ScrollButton>
             <Icon id="downArrow" />
           </ScrollButton>
+          <Footer />
         </FooterContainer>
       </Body>
     </Container>

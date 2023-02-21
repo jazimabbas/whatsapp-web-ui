@@ -17,7 +17,7 @@ const IconWrapper = styled.div`
   margin-right: 10px;
 
   .icon {
-    color: white;
+    color: white !important;
   }
 `;
 
