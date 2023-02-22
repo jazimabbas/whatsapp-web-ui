@@ -4,7 +4,7 @@ import styled from "styled-components";
 const SearchWrapper = styled.div`
   padding: 7px 10px;
   height: 50px;
-  background: #f6f6f6;
+  background: white;
   position: relative;
 
   .search-icon {
@@ -23,12 +23,10 @@ const SearchWrapper = styled.div`
     transition: all 0.8s ease;
     opacity: 0;
     transition-delay: 0.3s;
-    color: rgb(51, 183, 246);
+    color: #00a884;
   }
 
   &:focus-within {
-    background: white;
-
     .search-icon {
       opacity: 0;
       transition-delay: 0s;
@@ -54,15 +52,19 @@ const IconContainer = styled.div`
 `;
 
 const Input = styled.input`
-  background: white;
-  color: rgb(74, 74, 74);
+  background: rgb(237, 237, 237);
+  color: #3b4a54;
   padding-left: 60px;
-  border-radius: 18px;
+  border-radius: 10px;
   width: 100%;
   height: 100%;
 
   &::placeholder {
-    color: rgb(153, 153, 153);
+    color: rgb(74, 74, 74);
+  }
+
+  &:focus {
+    outline: none;
   }
 `;
 
