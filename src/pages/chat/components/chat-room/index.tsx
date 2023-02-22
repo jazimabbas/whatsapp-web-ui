@@ -59,12 +59,21 @@ const ScrollButton = styled.button`
 
 export default function ChatRoom() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+  const handleOpen = (menu: "search" | "profile") => {
+    setIsSearchOpen(menu === "search" ? true : false);
+    setIsProfileOpen(menu === "profile" ? true : false);
+  };
 
   return (
     <Container>
       <Body>
         <Background />
-        <Header onSearchClick={() => setIsSearchOpen(true)} />
+        <Header
+          onSearchClick={() => handleOpen("search")}
+          onProfileClick={() => handleOpen("profile")}
+        />
         <MessagesList />
         <FooterContainer>
           <ScrollButton>
@@ -76,7 +85,7 @@ export default function ChatRoom() {
       <Sidebar title="Search" isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)}>
         <SearchSection />
       </Sidebar>
-      <Sidebar title="Contact Info" isOpen={true}>
+      <Sidebar title="Contact Info" isOpen={isProfileOpen} onClose={() => setIsProfileOpen(false)}>
         <ProfileSection />
       </Sidebar>
     </Container>

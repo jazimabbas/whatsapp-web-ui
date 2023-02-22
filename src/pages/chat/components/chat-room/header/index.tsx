@@ -41,7 +41,7 @@ const Avatar = styled.img`
   /* should refactor to avatar */
 `;
 
-const ProfileWrapper = styled.div`
+const ProfileWrapper = styled.div<{ onClick: any }>`
   flex: 1;
   cursor: pointer;
 `;
@@ -88,6 +88,7 @@ const Action = styled.button<any>`
 
 type HeaderProps = {
   onSearchClick: Function;
+  onProfileClick: Function;
 };
 
 export default function Header(props: HeaderProps) {
@@ -96,7 +97,7 @@ export default function Header(props: HeaderProps) {
       <AvatarWrapper>
         <Avatar src="/assets/images/girl.jpeg" />
       </AvatarWrapper>
-      <ProfileWrapper>
+      <ProfileWrapper onClick={props.onProfileClick}>
         <Name>Jazim Abbas</Name>
         <Subtitle>online</Subtitle>
       </ProfileWrapper>
