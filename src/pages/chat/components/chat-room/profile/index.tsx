@@ -49,11 +49,11 @@ const ProfileName = styled.h2`
   align-self: flex-start;
 `;
 
-const MediaSection = styled.div`
+const Section = styled.div`
   ${profileSectionStyles}
 `;
 
-const MediaHeadingWrapper = styled.div`
+const HeadingWrapper = styled.div`
   margin-top: 5px;
   margin-bottom: 10px;
 
@@ -62,7 +62,7 @@ const MediaHeadingWrapper = styled.div`
   justify-content: space-between;
 `;
 
-const MediaHeading = styled.h2`
+const Heading = styled.h2`
   color: rgb(0, 150, 136);
   font-size: 0.85rem;
   flex: 1;
@@ -84,6 +84,20 @@ const MediaImage = styled.img`
   width: 32%;
 `;
 
+const AboutItem = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-weight: 500;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid #ebebeb;
+  }
+`;
+
 export default function ProfileSection() {
   return (
     <Wrapper>
@@ -94,19 +108,29 @@ export default function ProfileSection() {
         <ProfileName>Jazim Abbas</ProfileName>
       </PersonalInfo>
 
-      <MediaSection>
-        <MediaHeadingWrapper>
-          <MediaHeading>Media, Links and Documents</MediaHeading>
+      <Section>
+        <HeadingWrapper>
+          <Heading>Media, Links and Documents</Heading>
           <MediaButton>
             <Icon id="rightArrow" className="icon" />
           </MediaButton>
-        </MediaHeadingWrapper>
+        </HeadingWrapper>
         <MediaImagesWrapper>
           <MediaImage src="/assets/images/placeholder.jpeg" alt="Media" />
           <MediaImage src="/assets/images/placeholder.jpeg" alt="Media" />
           <MediaImage src="/assets/images/placeholder.jpeg" alt="Media" />
         </MediaImagesWrapper>
-      </MediaSection>
+      </Section>
+
+      <Section>
+        <HeadingWrapper>
+          <Heading>About and phone number</Heading>
+        </HeadingWrapper>
+        <ul>
+          <AboutItem>Out here saving the world, one block of code at a time.</AboutItem>
+          <AboutItem>+123456789</AboutItem>
+        </ul>
+      </Section>
     </Wrapper>
   );
 }
