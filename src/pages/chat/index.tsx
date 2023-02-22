@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Sidebar from "./components/sidebar";
 import ChatRoom from "./components/chat-room";
+import UnSelectedChat from "./components/unselected-chat";
 
 export const App = styled.div`
   width: 100%;
@@ -61,7 +62,8 @@ export default function ChatPage() {
       <Message> Only available on desktop 😊. </Message>
       <Content>
         <Sidebar />
-        <ChatRoom />
+        {/* <ChatRoom /> */}
+        <UnSelectedChat />
       </Content>
     </App>
   );

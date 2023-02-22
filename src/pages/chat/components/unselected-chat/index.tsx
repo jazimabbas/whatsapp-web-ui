@@ -14,8 +14,7 @@ const Container = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  width: 250px;
-  height: 250px;
+  width: 550px;
   margin-bottom: 20px;
 `;
 
@@ -28,13 +27,13 @@ const Image = styled.img`
 const Title = styled.h1`
   color: #525252;
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 10px;
 `;
 
 const Text = styled.p`
   color: rgba(0, 0, 0, 0.45);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
   max-width: 500px;
   line-height: 24px;
@@ -43,11 +42,19 @@ const Text = styled.p`
 
   &:first-of-type {
     padding-bottom: 30px;
-    border-bottom: 1px solid rgba(74, 74, 74, 0.08);
   }
 
   &:last-of-type {
-    padding-top: 30px;
+    padding-top: 10px;
+  }
+`;
+
+const Link = styled.a`
+  margin-left: 5px;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: underline;
   }
 `;
 
@@ -55,12 +62,18 @@ export default function UnSelectedChat() {
   return (
     <Container>
       <ImageWrapper>
-        <Image src="/assets/images/unselected-chat.jpg" />
+        <Image src="/assets/images/entry-image.webp" />
       </ImageWrapper>
-      <Title> Keep your phone connected </Title>
+      <Title> WhatsApp Web </Title>
       <Text>
-        WhatsApp connects to your phone to sync messages. To reduce data usage, connect your phone
-        to Wi-Fi.
+        Send and receive messages without keeping your phone online. <br />
+        Use WhatsApp on up to 4 linked devices and 1 phone at the same time.
+      </Text>
+      <Text>
+        <span>Created by</span>{" "}
+        <Link target="_blank" href="https://github.com/jazimabbas">
+          Jazim Abbas
+        </Link>
       </Text>
     </Container>
   );

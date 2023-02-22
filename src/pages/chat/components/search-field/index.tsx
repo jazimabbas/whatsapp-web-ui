@@ -60,7 +60,8 @@ const Input = styled.input`
   height: 100%;
 
   &::placeholder {
-    color: rgb(74, 74, 74);
+    /* color: rgb(74, 74, 74); */
+    color: #3b4a54;
   }
 
   &:focus {
