@@ -98,6 +98,23 @@ const AboutItem = styled.li`
   }
 `;
 
+const ActionSection = styled(Section)`
+  color: rgb(223, 51, 51);
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+
+  .icon {
+    margin-right: 20px;
+  }
+`;
+
+const ActionText = styled.p`
+  flex: 1;
+`;
+
 export default function ProfileSection() {
   return (
     <Wrapper>
@@ -131,6 +148,19 @@ export default function ProfileSection() {
           <AboutItem>+123456789</AboutItem>
         </ul>
       </Section>
+
+      <ActionSection>
+        <Icon id="block" className="icon" />
+        <ActionText>Block</ActionText>
+      </ActionSection>
+      <ActionSection>
+        <Icon id="thumbsDown" className="icon" />
+        <ActionText>Report contact</ActionText>
+      </ActionSection>
+      <ActionSection>
+        <Icon id="delete" className="icon" />
+        <ActionText>Delete chat</ActionText>
+      </ActionSection>
     </Wrapper>
   );
 }
