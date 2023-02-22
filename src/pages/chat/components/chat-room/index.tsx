@@ -6,6 +6,7 @@ import Footer from "./footer";
 import Sidebar from "./sidebar";
 import { useState } from "react";
 import SearchSection from "./search-section";
+import ProfileSection from "./profile";
 
 const Container = styled.div`
   display: flex;
@@ -74,6 +75,9 @@ export default function ChatRoom() {
       </Body>
       <Sidebar title="Search" isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)}>
         <SearchSection />
+      </Sidebar>
+      <Sidebar title="Contact Info" isOpen={true}>
+        <ProfileSection />
       </Sidebar>
     </Container>
   );
