@@ -1,8 +1,10 @@
+import Icon from "common/components/icons";
 import styled, { css } from "styled-components";
 
 const Wrapper = styled.div`
   background: rgb(237, 237, 237);
   padding-bottom: 2pc;
+  height: 100%;
 `;
 
 const profileSectionStyles = css`
@@ -47,6 +49,41 @@ const ProfileName = styled.h2`
   align-self: flex-start;
 `;
 
+const MediaSection = styled.div`
+  ${profileSectionStyles}
+`;
+
+const MediaHeadingWrapper = styled.div`
+  margin-top: 5px;
+  margin-bottom: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const MediaHeading = styled.h2`
+  color: rgb(0, 150, 136);
+  font-size: 0.85rem;
+  flex: 1;
+`;
+
+const MediaButton = styled.button`
+  .icon {
+    color: rgb(145, 145, 145);
+  }
+`;
+
+const MediaImagesWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const MediaImage = styled.img`
+  width: 32%;
+`;
+
 export default function ProfileSection() {
   return (
     <Wrapper>
@@ -56,6 +93,20 @@ export default function ProfileSection() {
         </AvatarWrapper>
         <ProfileName>Jazim Abbas</ProfileName>
       </PersonalInfo>
+
+      <MediaSection>
+        <MediaHeadingWrapper>
+          <MediaHeading>Media, Links and Documents</MediaHeading>
+          <MediaButton>
+            <Icon id="rightArrow" className="icon" />
+          </MediaButton>
+        </MediaHeadingWrapper>
+        <MediaImagesWrapper>
+          <MediaImage src="/assets/images/placeholder.jpeg" alt="Media" />
+          <MediaImage src="/assets/images/placeholder.jpeg" alt="Media" />
+          <MediaImage src="/assets/images/placeholder.jpeg" alt="Media" />
+        </MediaImagesWrapper>
+      </MediaSection>
     </Wrapper>
   );
 }
