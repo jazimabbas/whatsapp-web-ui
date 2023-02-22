@@ -58,6 +58,11 @@ const Link = styled.a`
   }
 `;
 
+const Icon = styled.i`
+  color: red;
+  margin-left: 2px;
+`;
+
 export default function UnSelectedChat() {
   return (
     <Container>
@@ -74,6 +79,7 @@ export default function UnSelectedChat() {
         <Link target="_blank" href="https://github.com/jazimabbas">
           Jazim Abbas
         </Link>
+        <Icon className="fa fa-heart" aria-hidden="true" />
       </Text>
     </Container>
   );
