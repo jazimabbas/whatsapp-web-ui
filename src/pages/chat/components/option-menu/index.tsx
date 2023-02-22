@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Icon from "common/components/icons";
+import useCloseMenu from "../../hooks/useCloseMenu";
 
 const Container = styled.div`
   position: relative;
@@ -67,6 +68,7 @@ type OptionsMenuProps = {
 
 export default function OptionsMenu(props: OptionsMenuProps) {
   const [showOptions, setShowOptions] = useState(false);
+  const ref = useCloseMenu(() => setShowOptions(false));
   const {
     iconId,
     options,
@@ -96,7 +98,7 @@ export default function OptionsMenu(props: OptionsMenuProps) {
   };
 
   return (
-    <Container>
+    <Container ref={ref}>
       <Button aria-label={ariaLabel} className={getBtnClassName()} onClick={handleClick}>
         <Icon id={iconId} className={iconClassName} />
       </Button>
