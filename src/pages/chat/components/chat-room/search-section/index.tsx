@@ -3,7 +3,9 @@ import styled from "styled-components";
 import SearchField from "../../search-field";
 
 const Search = styled(SearchField)`
-  background: #f6f6f6;
+  /* common styles for bottom border */
+  border-bottom: 1px solid #dadada;
+  /* common styles for bottom border */
 `;
 
 const Content = styled.div`

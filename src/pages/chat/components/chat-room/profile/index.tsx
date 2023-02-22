@@ -46,7 +46,7 @@ const ProfileName = styled.h2`
   flex: 1;
   color: #000000;
   font-size: 1.2rem;
-  align-self: flex-start;
+  align-self: center;
 `;
 
 const Section = styled.div`

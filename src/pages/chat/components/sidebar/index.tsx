@@ -68,7 +68,8 @@ const Actions = styled.div`
 const ContactContainer = styled.div`
   flex: 1;
   overflow-y: scroll;
-  background: #f5f5f5;
+  /* background: #f5f5f5; */
+  background: white;
   border-top: 1px solid #dadada;
 `;
 
