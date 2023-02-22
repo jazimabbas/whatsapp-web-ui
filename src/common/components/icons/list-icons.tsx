@@ -335,6 +335,9 @@ const icons = {
       ></path>
     </Svg>
   ),
+  heart: (props) => (
+    <i className={`fa fa-heart ${props.className ?? ""}`} aria-hidden="true" {...props} />
+  ),
   laptop: (props) => (
     <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 18" width="21" height="18" {...props}>
       <path

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Icon from "common/components/icons";
 
 const Container = styled.div`
   background: #f8f9fa;
@@ -58,7 +59,7 @@ const Link = styled.a`
   }
 `;
 
-const Icon = styled.i`
+const IconWrapper = styled.i`
   color: red;
   margin-left: 2px;
 `;
@@ -79,7 +80,9 @@ export default function UnSelectedChat() {
         <Link target="_blank" href="https://github.com/jazimabbas">
           Jazim Abbas
         </Link>
-        <Icon className="fa fa-heart" aria-hidden="true" />
+        <IconWrapper>
+          <Icon id="heart" />
+        </IconWrapper>
       </Text>
     </Container>
   );
