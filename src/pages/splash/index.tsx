@@ -34,9 +34,20 @@ const LoadingContainer = styled.div`
   }
 `;
 
-const Subtitle = styled.p`
-  margin-top: 5px;
+const Title = styled.p`
+  font-size: 1.3rem;
+`;
+
+const Subtitle = styled.div`
+  margin-top: 10px;
   color: #777878;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+
+  span {
+    margin-left: 3px;
+  }
 `;
 
 export default function SplashPage() {
@@ -46,8 +57,11 @@ export default function SplashPage() {
       <LoadingContainer>
         <hr />
       </LoadingContainer>
-      <p>WhatsApp</p>
-      <Subtitle>End-to-end encrypted</Subtitle>
+      <Title>WhatsApp</Title>
+      <Subtitle>
+        <Icon id="lock" />
+        <span>End-to-end encrypted</span>
+      </Subtitle>
     </Container>
   );
 }
