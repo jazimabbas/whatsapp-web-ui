@@ -88,7 +88,14 @@ const SubTitle = styled.p`
 
 const EncryptionIcon = styled(Icon)`
   color: rgba(0, 0, 0, 0.25);
-  /* width: 30px; */
+`;
+
+const Link = styled.a`
+  text-decoration: revert-layer;
+
+  &:hover {
+    text-decoration: revert-layer;
+  }
 `;
 
 export default function SplashScreen() {
@@ -102,8 +109,11 @@ export default function SplashScreen() {
       <Progress isCompleted={isLoaded} progess={progress} />
       <Title>WhatsApp</Title>
       <SubTitle>
-        <EncryptionIcon id="lock" />
-        End-to-end encrypted. Built by Jazim Abbas.
+        <EncryptionIcon id="lock" /> End-to-end encrypted. Built by{" "}
+        <Link href="https://github.com/jazimabbas" target="_blank">
+          Jazim Abbas
+        </Link>{" "}
+        ❤️.
       </SubTitle>
     </Container>
   );
