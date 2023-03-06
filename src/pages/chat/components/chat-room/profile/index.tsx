@@ -45,7 +45,9 @@ export default function ProfileSection() {
           <Heading>About and phone number</Heading>
         </HeadingWrapper>
         <ul>
-          <AboutItem>Out here saving the world, one block of code at a time.</AboutItem>
+          <AboutItem>
+            Everyone should learn how to program because it teaches you how to think.
+          </AboutItem>
           <AboutItem>+123456789</AboutItem>
         </ul>
       </Section>

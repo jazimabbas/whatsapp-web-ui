@@ -6,10 +6,20 @@ export const AlertContainer = styled.div`
   display: flex;
   align-items: center;
   background: #9de1fe;
+  position: relative;
 
   .underline {
     text-decoration: underline;
   }
+`;
+
+export const CloseIcon = styled.img`
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
 `;
 
 export const IconWrapper = styled.div`

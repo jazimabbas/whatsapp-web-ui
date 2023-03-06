@@ -1,10 +1,11 @@
 import Icon from "common/components/icons";
-import { AlertContainer, IconWrapper, TextContainer, Text } from "./styles";
+import { AlertContainer, IconWrapper, TextContainer, Text, CloseIcon } from "./styles";
 
 export default function SidebarAlert() {
   return (
     <>
       <AlertContainer>
+        <CloseIcon src="/assets/images/close.png" />
         <IconWrapper>
           <Icon id="noWifi" className="icon" />
         </IconWrapper>
