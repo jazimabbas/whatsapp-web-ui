@@ -3,6 +3,7 @@ import InboxContact from "./contacts";
 import OptionsMenu from "../option-menu";
 import SearchField from "../search-field";
 import Icon from "common/components/icons";
+import { useChatContext } from "pages/chat/context/chat";
 import {
   Actions,
   Avatar,
@@ -11,19 +12,6 @@ import {
   ImageWrapper,
   SidebarContainer,
 } from "./styles";
-import { useChatContext } from "pages/chat/context/chat";
-
-// const inbox = [
-//   {
-//     image: "/assets/images/girl.jpeg",
-//     title: "Jazim",
-//     subTitle: "Subtitle",
-//     isPinned: false,
-//     notificationCount: 0,
-//     timestamp: "10:45",
-//     messageStatus: "SENT" as const,
-//   },
-// ];
 
 export default function Sidebar() {
   const chatCtx = useChatContext();
@@ -62,7 +50,12 @@ export default function Sidebar() {
       <SearchField />
       <ContactContainer>
         {chatCtx.inbox.map((inbox) => (
-          <InboxContact key={inbox.id} inbox={inbox} onChangeChat={chatCtx.onChangeChat} />
+          <InboxContact
+            key={inbox.id}
+            inbox={inbox}
+            isActive={inbox.id === chatCtx.activeChat?.id}
+            onChangeChat={chatCtx.onChangeChat}
+          />
         ))}
       </ContactContainer>
     </SidebarContainer>

@@ -18,10 +18,11 @@ import {
 type InboxContactProps = {
   inbox: Inbox;
   onChangeChat?: Function;
+  isActive?: boolean;
 };
 
 export default function InboxContact(props: InboxContactProps) {
-  const { onChangeChat } = props;
+  const { onChangeChat, isActive } = props;
   const { name, lastMessage, image, timestamp } = props.inbox;
 
   const handleChangeChat = () => {
@@ -31,7 +32,7 @@ export default function InboxContact(props: InboxContactProps) {
   };
 
   return (
-    <Contact onClick={handleChangeChat}>
+    <Contact isActive={isActive} onClick={handleChangeChat}>
       <AvatarWrapper>
         <Avatar src={image} />
       </AvatarWrapper>

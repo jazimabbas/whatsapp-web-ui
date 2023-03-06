@@ -46,7 +46,7 @@ const messages: Message[] = [
     isOpponent: true,
   },
   {
-    id: "2",
+    id: "4",
     body: "What time should we meet?",
     date: "20/02/2023",
     timestamp: "12:30",
@@ -54,7 +54,7 @@ const messages: Message[] = [
     isOpponent: false,
   },
   {
-    id: "3",
+    id: "5",
     body: "Can you send me that file?",
     date: "21/02/2023",
     timestamp: "15:42",
@@ -62,7 +62,7 @@ const messages: Message[] = [
     isOpponent: true,
   },
   {
-    id: "4",
+    id: "6",
     body: "I'll be there in 10 minutes.",
     date: "22/02/2023",
     timestamp: "10:12",
@@ -70,7 +70,7 @@ const messages: Message[] = [
     isOpponent: false,
   },
   {
-    id: "5",
+    id: "7",
     body: "Let's meet at the coffee shop.",
     date: "23/02/2023",
     timestamp: "18:03",
@@ -78,7 +78,7 @@ const messages: Message[] = [
     isOpponent: true,
   },
   {
-    id: "6",
+    id: "8",
     body: "Sorry, I can't make it today.",
     date: "24/02/2023",
     timestamp: "13:25",
@@ -86,7 +86,7 @@ const messages: Message[] = [
     isOpponent: false,
   },
   {
-    id: "7",
+    id: "9",
     body: "No problem, we can reschedule.",
     date: "25/02/2023",
     timestamp: "16:08",
@@ -94,7 +94,7 @@ const messages: Message[] = [
     isOpponent: true,
   },
   {
-    id: "8",
+    id: "10",
     body: "Do you have any suggestions for dinner?",
     date: "26/02/2023",
     timestamp: "20:12",
@@ -102,7 +102,7 @@ const messages: Message[] = [
     isOpponent: false,
   },
   {
-    id: "9",
+    id: "11",
     body: "How about that new Italian place?",
     date: "27/02/2023",
     timestamp: "09:52",
@@ -110,7 +110,7 @@ const messages: Message[] = [
     isOpponent: true,
   },
   {
-    id: "10",
+    id: "12",
     body: "Sounds good to me.",
     date: "28/02/2023",
     timestamp: "14:27",
