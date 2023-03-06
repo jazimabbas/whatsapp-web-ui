@@ -107,9 +107,9 @@ export const ChatContext = React.createContext<ChatContextProp>(initialValue);
 export default function ChatProvider(props: { children: any }) {
   const { children } = props;
 
-  const [activeChat, setActiveChat] = useState<Inbox>();
   const [user] = useState<User>(initialValue.user);
   const [inbox] = useState<Inbox[]>(initialValue.inbox);
+  const [activeChat, setActiveChat] = useState<Inbox>();
 
   const handleChangeChat = (chat: Inbox) => {
     setActiveChat(chat);
