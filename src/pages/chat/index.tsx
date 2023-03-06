@@ -59,7 +59,7 @@ export const Content = styled.div`
 export default function ChatPage() {
   return (
     <App>
-      <Message> Only available on desktop 😊. </Message>
+      <Message> Currently Only available on desktop or large devices 😊. </Message>
       <Content>
         <Sidebar />
         {/* <ChatRoom /> */}

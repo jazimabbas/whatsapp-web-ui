@@ -73,6 +73,18 @@ const ContactContainer = styled.div`
   border-top: 1px solid #dadada;
 `;
 
+const inbox = [
+  {
+    image: "/assets/images/girl.jpeg",
+    title: "Jazim",
+    subTitle: "Subtitle",
+    isPinned: false,
+    notificationCount: 0,
+    timestamp: "10:45",
+    messageStatus: "SENT" as const,
+  },
+];
+
 export default function Sidebar() {
   return (
     <SidebarContainer>
@@ -107,11 +119,10 @@ export default function Sidebar() {
       <SidebarAlert />
       <SearchField />
       <ContactContainer>
-        <InboxContact />
-        <InboxContact />
-        <InboxContact />
-        <InboxContact />
-        <InboxContact />
+        <InboxContact inbox={inbox[0]} />
+        <InboxContact inbox={inbox[0]} />
+        <InboxContact inbox={inbox[0]} />
+        <InboxContact inbox={inbox[0]} />
       </ContactContainer>
     </SidebarContainer>
   );

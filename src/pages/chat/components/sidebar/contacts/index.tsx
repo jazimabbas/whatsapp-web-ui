@@ -1,12 +1,6 @@
 import Icon from "common/components/icons";
+import { MessageStatus } from "common/types/common.type";
 import styled, { css } from "styled-components";
-
-const Container = styled.div`
-  flex: 1;
-  overflow-y: scroll;
-  background: #f5f5f5;
-  border-top: 1px solid #dadada;
-`;
 
 const Contact = styled.div`
   height: 72px;
@@ -124,36 +118,71 @@ const UnreadContact = styled.span`
   font-weight: 500;
 `;
 
-export default function InboxContact() {
+type Inbox = {
+  image: string;
+  title: string;
+  subTitle?: string;
+  isPinned?: boolean;
+  notificationCount?: number;
+  timestamp?: string;
+  messageStatus: MessageStatus;
+};
+
+export default function InboxContact(props: { inbox: Inbox }) {
+  const { title, subTitle, image, timestamp } = props.inbox;
+
   return (
     <Contact>
       <AvatarWrapper>
-        <Avatar src="/assets/images/girl.jpeg" />
+        <Avatar src={image} />
       </AvatarWrapper>
       <Content>
         <TopContent>
-          <Name>Jazim Abbas</Name>
-          <Time>11:21</Time>
+          <Name>{title}</Name>
+          {timestamp && subTitle ? <Time>{timestamp}</Time> : <Trailing {...props.inbox} />}
         </TopContent>
+
         <BottomContent>
           <MessageWrapper>
-            <Icon id="singleTick" />
-            <span className={`sidebar-contact__message ${"sidebar-contact__message--unread"}`}>
-              Message here ..
-            </span>
+            <Message {...props.inbox} />
           </MessageWrapper>
-          <div className="sidebar-contact__icons">
-            <Icon id="pinned" className="sidebar-contact__icon" />
-            <UnreadContact>5</UnreadContact>
-            <button aria-label="sidebar-contact__btn">
-              <Icon
-                id="downArrow"
-                className="sidebar-contact__icon sidebar-contact__icon--dropdown"
-              />
-            </button>
-          </div>
+
+          {timestamp && subTitle && <Trailing {...props.inbox} />}
         </BottomContent>
       </Content>
     </Contact>
+  );
+}
+
+function Message(props: Pick<Inbox, "messageStatus" | "subTitle">) {
+  const { subTitle, messageStatus } = props;
+
+  if (!subTitle) return <></>;
+
+  return (
+    <>
+      <Icon id={messageStatus === "SENT" ? "singleTick" : "doubleTick"} />
+      <span className={`sidebar-contact__message ${"sidebar-contact__message--unread"}`}>
+        {subTitle}
+      </span>
+    </>
+  );
+}
+
+function Trailing(props: Pick<Inbox, "isPinned" | "notificationCount">) {
+  const { isPinned, notificationCount } = props;
+
+  return (
+    <div className="sidebar-contact__icons">
+      {isPinned && <Icon id="pinned" className="sidebar-contact__icon" />}
+
+      {notificationCount !== undefined && notificationCount > 0 && (
+        <UnreadContact>{notificationCount}</UnreadContact>
+      )}
+
+      <button aria-label="sidebar-contact__btn">
+        <Icon id="downArrow" className="sidebar-contact__icon sidebar-contact__icon--dropdown" />
+      </button>
+    </div>
   );
 }
