@@ -71,6 +71,9 @@ export default function ChatRoom() {
       <Body>
         <Background />
         <Header
+          title="Jazim"
+          subTitle="Online"
+          image="/assets/images/girl.jpeg"
           onSearchClick={() => handleOpen("search")}
           onProfileClick={() => handleOpen("profile")}
         />

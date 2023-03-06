@@ -89,20 +89,25 @@ const Action = styled.button<any>`
 type HeaderProps = {
   onSearchClick: Function;
   onProfileClick: Function;
+  title: string;
+  image: string;
+  subTitle: string;
 };
 
 export default function Header(props: HeaderProps) {
+  const { title, subTitle, image, onProfileClick, onSearchClick } = props;
+
   return (
     <Container>
       <AvatarWrapper>
-        <Avatar src="/assets/images/girl.jpeg" />
+        <Avatar src={image} />
       </AvatarWrapper>
-      <ProfileWrapper onClick={props.onProfileClick}>
-        <Name>Jazim Abbas</Name>
-        <Subtitle>online</Subtitle>
+      <ProfileWrapper onClick={onProfileClick}>
+        <Name>{title}</Name>
+        {subTitle && <Subtitle>{subTitle}</Subtitle>}
       </ProfileWrapper>
       <Actions>
-        <Action onClick={props.onSearchClick}>
+        <Action onClick={onSearchClick}>
           <Icon id="search" className="icon search-icon" />
         </Action>
         <OptionsMenu
