@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import Icon from "common/components/icons";
+import useAppLoad from "./hooks/useAppLoad";
 
 const Container = styled.div`
   background: rgb(240, 240, 240);
@@ -92,42 +92,7 @@ const EncryptionIcon = styled(Icon)`
 `;
 
 export default function SplashScreen() {
-  const [progress, setProgress] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 70) {
-          clearInterval(interval);
-        }
-
-        return prev + 10;
-      });
-    }, 1000);
-
-    return () => {
-      if (interval) {
-        clearInterval(interval);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    let timeout: any;
-    if (progress >= 70) {
-      timeout = setTimeout(() => {
-        console.log("make isLoaded to true");
-        setIsLoaded(true);
-      }, 300);
-    }
-
-    return () => {
-      if (timeout) {
-        clearTimeout(timeout);
-      }
-    };
-  }, [progress]);
+  const { progress, isLoaded } = useAppLoad();
 
   return (
     <Container>
