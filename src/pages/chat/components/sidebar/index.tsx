@@ -62,7 +62,7 @@ export default function Sidebar() {
       <SearchField />
       <ContactContainer>
         {chatCtx.inbox.map((inbox) => (
-          <InboxContact key={inbox.id} inbox={inbox} />
+          <InboxContact key={inbox.id} inbox={inbox} onChangeChat={chatCtx.onChangeChat} />
         ))}
       </ContactContainer>
     </SidebarContainer>

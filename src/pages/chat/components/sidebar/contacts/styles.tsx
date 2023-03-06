@@ -1,7 +1,7 @@
 import Icon from "common/components/icons";
 import styled, { css } from "styled-components";
 
-export const Contact = styled.div`
+export const Contact = styled.div<{ onClick: any }>`
   height: 72px;
   padding: 10px 20px;
   display: flex;
