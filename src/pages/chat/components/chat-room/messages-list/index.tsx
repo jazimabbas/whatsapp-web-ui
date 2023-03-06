@@ -1,4 +1,5 @@
 import Icon from "common/components/icons";
+import { MessageStatus } from "common/types/common.type";
 import styled, { css } from "styled-components";
 
 const Container = styled.div`
@@ -151,6 +152,42 @@ const ChatMessageFooter = styled.span`
   font-weight: 500;
 `;
 
+type Message = {
+  id: string;
+  body: string;
+  date: string;
+  timestamp: string;
+  messageStatus: MessageStatus;
+  isOpponent: boolean;
+};
+
+const messages: Message[] = [
+  {
+    id: "1",
+    body: "Message here..",
+    date: "19/02/2023",
+    timestamp: "08:57",
+    messageStatus: "READ",
+    isOpponent: true,
+  },
+  {
+    id: "2",
+    body: "Message here..",
+    date: "19/02/2023",
+    timestamp: "08:57",
+    messageStatus: "READ",
+    isOpponent: false,
+  },
+  {
+    id: "3",
+    body: "Message here..",
+    date: "19/02/2023",
+    timestamp: "08:57",
+    messageStatus: "SENT",
+    isOpponent: true,
+  },
+];
+
 export default function MessagesList() {
   return (
     <Container>
@@ -163,33 +200,35 @@ export default function MessagesList() {
         or listen to them. Click to learn more.
       </EncryptionMessage>
       <MessageGroup>
-        <ChatMessage className="chat__msg--received">
-          <span>Testing ...</span>
-          <ChatMessageFiller />
-          <ChatMessageFooter>08:57</ChatMessageFooter>
-        </ChatMessage>
-
-        <Messages />
+        {messages.map((message) => (
+          <SingleMessage key={message.id} message={message} />
+        ))}
       </MessageGroup>
     </Container>
   );
 }
 
-function Messages() {
-  const messages = Array.from(Array(10).keys());
+function SingleMessage(props: { message: Message }) {
+  const { message } = props;
 
   return (
-    <>
-      {messages.map((msg) => (
-        <ChatMessage className="chat__msg--sent" key={msg}>
-          <span>Testing ...</span>
-          <ChatMessageFiller />
-          <ChatMessageFooter>
-            <span>10:20</span>
-            <Icon id="doubleTick" className="chat__msg-status-icon chat__msg-status-icon--blue" />
-          </ChatMessageFooter>
-        </ChatMessage>
-      ))}
-    </>
+    <ChatMessage
+      key={message.id}
+      className={message.isOpponent ? "chat__msg--received" : "chat__msg--sent"}
+    >
+      <span>{message.body}</span>
+      <ChatMessageFiller />
+      <ChatMessageFooter>
+        <span>{message.timestamp}</span>
+        {!message.isOpponent && (
+          <Icon
+            id={`${message.messageStatus === "SENT" ? "singleTick" : "doubleTick"}`}
+            className={`chat__msg-status-icon ${
+              message.messageStatus === "READ" ? "chat__msg-status-icon--blue" : ""
+            }`}
+          />
+        )}
+      </ChatMessageFooter>
+    </ChatMessage>
   );
 }
