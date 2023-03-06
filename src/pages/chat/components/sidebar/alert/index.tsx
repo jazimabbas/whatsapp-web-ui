@@ -1,43 +1,5 @@
-import styled from "styled-components";
 import Icon from "common/components/icons";
-
-const AlertContainer = styled.div`
-  min-height: 85px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  background: #9de1fe;
-
-  .underline {
-    text-decoration: underline;
-  }
-`;
-
-const IconWrapper = styled.div`
-  margin-right: 10px;
-
-  .icon {
-    color: white !important;
-  }
-`;
-
-const TextContainer = styled.div`
-  flex: 1;
-`;
-
-const Text = styled.p`
-  &:first-of-type {
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: #343738;
-  }
-
-  &:last-of-type {
-    font-size: 0.85rem;
-    color: #414a4e;
-    line-height: 17px;
-  }
-`;
+import { AlertContainer, IconWrapper, TextContainer, Text } from "./styles";
 
 export default function SidebarAlert() {
   return (
