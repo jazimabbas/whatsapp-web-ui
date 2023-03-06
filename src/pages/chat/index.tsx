@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Sidebar from "./components/sidebar";
-import ChatRoom from "./components/chat-room";
+// import ChatRoom from "./components/chat-room";
 import UnSelectedChat from "./components/unselected-chat";
 
 export const App = styled.div`

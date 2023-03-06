@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import Icon from "common/components/icons";
-import useAppLoad from "./hooks/useAppLoad";
 
 const Container = styled.div`
   background: rgb(240, 240, 240);
@@ -98,8 +97,13 @@ const Link = styled.a`
   }
 `;
 
-export default function SplashScreen() {
-  const { progress, isLoaded } = useAppLoad();
+type SplashPageProps = {
+  progress: number;
+  isLoaded: boolean;
+};
+
+export default function SplashPage(props: SplashPageProps) {
+  const { progress, isLoaded } = props;
 
   return (
     <Container>

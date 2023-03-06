@@ -49,7 +49,7 @@ export default function useAppLoad(props?: AppLoadProps) {
         clearInterval(interval);
       }
     };
-  }, []);
+  }, [incrementProgressValue, progressInterval, stoppedProgressValue]);
 
   useEffect(() => {
     let timeout: any;
@@ -64,7 +64,7 @@ export default function useAppLoad(props?: AppLoadProps) {
         clearTimeout(timeout);
       }
     };
-  }, [progress]);
+  }, [progress, stoppedProgressValue, isManualProgressCompleted, successLoadedTimeout]);
 
   const done = () => {
     if (!isManualProgressCompleted) {
