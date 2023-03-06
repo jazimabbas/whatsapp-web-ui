@@ -1,11 +1,16 @@
 import Icon from "common/components/icons";
 import { AlertContainer, IconWrapper, TextContainer, Text, CloseIcon } from "./styles";
+import { useState } from "react";
 
 export default function SidebarAlert() {
+  const [isClose, setIsClose] = useState(false);
+
+  if (isClose) return <></>;
+
   return (
     <>
       <AlertContainer>
-        <CloseIcon src="/assets/images/close.png" />
+        <CloseIcon src="/assets/images/close.png" onClick={() => setIsClose(true)} />
         <IconWrapper>
           <Icon id="noWifi" className="icon" />
         </IconWrapper>
