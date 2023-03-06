@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 type AppLoadProps = {
+  isProgressStartAutomatically?: boolean;
   incrementProgressValue?: number;
   /**
    * setIntervalue value i.e. to update the progress value after each interval
@@ -23,6 +24,7 @@ type AppLoadProps = {
 
 export default function useAppLoad(props?: AppLoadProps) {
   const {
+    isProgressStartAutomatically = true,
     progressInterval = 500,
     incrementProgressValue = 10,
     successLoadedTimeout = 3000,
@@ -34,28 +36,26 @@ export default function useAppLoad(props?: AppLoadProps) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= stoppedProgressValue) {
-          clearInterval(interval);
-        }
-
-        return prev + incrementProgressValue;
-      });
-    }, progressInterval);
+    let interval: any;
+    if (isProgressStartAutomatically) {
+      interval = _initiateProgress();
+    }
 
     return () => {
       if (interval) {
         clearInterval(interval);
       }
     };
-  }, [incrementProgressValue, progressInterval, stoppedProgressValue]);
+
+    // eslint-disable-next-line
+  }, []);
 
   useEffect(() => {
     let timeout: any;
     if (progress >= stoppedProgressValue && isManualProgressCompleted) {
       timeout = setTimeout(() => {
         setIsLoaded(true);
+        setProgress(100);
       }, successLoadedTimeout);
     }
 
@@ -66,11 +66,29 @@ export default function useAppLoad(props?: AppLoadProps) {
     };
   }, [progress, stoppedProgressValue, isManualProgressCompleted, successLoadedTimeout]);
 
+  const _initiateProgress = () => {
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= stoppedProgressValue) {
+          clearInterval(interval);
+        }
+
+        return prev + incrementProgressValue;
+      });
+    }, progressInterval);
+
+    return interval;
+  };
+
+  const start = () => {
+    _initiateProgress();
+  };
+
   const done = () => {
     if (!isManualProgressCompleted) {
       setIsLoaded(true);
     }
   };
 
-  return { progress, isLoaded, done };
+  return { progress, isLoaded, start, done };
 }

@@ -49,7 +49,7 @@ const Logo = styled(Icon)`
   height: 60px;
 `;
 
-const Progress = styled.div<{ isCompleted: boolean; progess: number }>`
+const Progress = styled.div<{ progess: number }>`
   width: 200px;
   max-width: 400px;
   height: 4px;
@@ -68,8 +68,6 @@ const Progress = styled.div<{ isCompleted: boolean; progess: number }>`
     ${(props) => css`
       width: ${props.progess}%;
     `};
-
-    ${(props) => props.isCompleted && `width: 100%;`};
   }
 `;
 
@@ -99,18 +97,17 @@ const Link = styled.a`
 
 type SplashPageProps = {
   progress: number;
-  isLoaded: boolean;
 };
 
 export default function SplashPage(props: SplashPageProps) {
-  const { progress, isLoaded } = props;
+  const { progress } = props;
 
   return (
     <Container>
       <LogoWrapper>
         <Logo id="whatsapp" />
       </LogoWrapper>
-      <Progress isCompleted={isLoaded} progess={progress} />
+      <Progress progess={progress} />
       <Title>WhatsApp</Title>
       <SubTitle>
         <EncryptionIcon id="lock" /> End-to-end encrypted. Built by{" "}
