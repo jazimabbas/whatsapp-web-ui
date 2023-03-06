@@ -1,21 +1,9 @@
 import React, { useState } from "react";
-import { MessageStatus } from "common/types/common.type";
+import { Inbox } from "common/types/common.type";
 
 type User = {
   name: string;
   image: string;
-};
-
-type Inbox = {
-  id: string;
-  name: string;
-  image: string;
-  lastMessage?: string;
-  timestamp?: string;
-  messageStatus?: MessageStatus;
-  notificationsCount?: number;
-  isPinned?: boolean;
-  isOnline?: boolean;
 };
 
 type ChatContextProp = {

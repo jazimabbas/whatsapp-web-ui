@@ -1,5 +1,5 @@
 import Icon from "common/components/icons";
-import { MessageStatus } from "common/types/common.type";
+import { Inbox } from "common/types/common.type";
 import {
   Avatar,
   AvatarWrapper,
@@ -14,16 +14,6 @@ import {
   TopContent,
   UnreadContact,
 } from "./styles";
-
-type Inbox = {
-  image: string;
-  name: string;
-  lastMessage?: string;
-  isPinned?: boolean;
-  notificationsCount?: number;
-  timestamp?: string;
-  messageStatus?: MessageStatus;
-};
 
 type InboxContactProps = {
   inbox: Inbox;

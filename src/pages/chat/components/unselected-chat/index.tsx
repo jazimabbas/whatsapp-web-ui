@@ -13,7 +13,7 @@ export default function UnSelectedChat() {
         Use WhatsApp on up to 4 linked devices and 1 phone at the same time.
       </Text>
       <Text>
-        <span>Created by</span>{" "}
+        <span>Built by</span>{" "}
         <Link target="_blank" href="https://github.com/jazimabbas">
           Jazim Abbas
         </Link>
