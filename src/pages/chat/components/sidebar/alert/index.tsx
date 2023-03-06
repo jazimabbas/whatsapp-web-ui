@@ -1,6 +1,6 @@
+import { useState } from "react";
 import Icon from "common/components/icons";
 import { AlertContainer, IconWrapper, TextContainer, Text, CloseIcon } from "./styles";
-import { useState } from "react";
 
 export default function SidebarAlert() {
   const [isClose, setIsClose] = useState(false);

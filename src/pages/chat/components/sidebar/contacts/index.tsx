@@ -17,16 +17,16 @@ import {
 
 type Inbox = {
   image: string;
-  title: string;
-  subTitle?: string;
+  name: string;
+  lastMessage?: string;
   isPinned?: boolean;
-  notificationCount?: number;
+  notificationsCount?: number;
   timestamp?: string;
-  messageStatus: MessageStatus;
+  messageStatus?: MessageStatus;
 };
 
 export default function InboxContact(props: { inbox: Inbox }) {
-  const { title, subTitle, image, timestamp } = props.inbox;
+  const { name, lastMessage, image, timestamp } = props.inbox;
 
   return (
     <Contact>
@@ -35,8 +35,8 @@ export default function InboxContact(props: { inbox: Inbox }) {
       </AvatarWrapper>
       <Content>
         <TopContent>
-          <Name>{title}</Name>
-          {timestamp && subTitle ? <Time>{timestamp}</Time> : <Trailing {...props.inbox} />}
+          <Name>{name}</Name>
+          {timestamp && lastMessage ? <Time>{timestamp}</Time> : <Trailing {...props.inbox} />}
         </TopContent>
 
         <BottomContent>
@@ -44,17 +44,17 @@ export default function InboxContact(props: { inbox: Inbox }) {
             <Message {...props.inbox} />
           </MessageWrapper>
 
-          {timestamp && subTitle && <Trailing {...props.inbox} />}
+          {timestamp && lastMessage && <Trailing {...props.inbox} />}
         </BottomContent>
       </Content>
     </Contact>
   );
 }
 
-function Message(props: Pick<Inbox, "messageStatus" | "subTitle">) {
-  const { subTitle, messageStatus } = props;
+function Message(props: Pick<Inbox, "messageStatus" | "lastMessage">) {
+  const { lastMessage, messageStatus } = props;
 
-  if (!subTitle) return <></>;
+  if (!lastMessage) return <></>;
 
   return (
     <>
@@ -62,20 +62,20 @@ function Message(props: Pick<Inbox, "messageStatus" | "subTitle">) {
         isRead={messageStatus === "READ"}
         id={messageStatus === "SENT" ? "singleTick" : "doubleTick"}
       />
-      <Subtitle>{subTitle}</Subtitle>
+      <Subtitle>{lastMessage}</Subtitle>
     </>
   );
 }
 
-function Trailing(props: Pick<Inbox, "isPinned" | "notificationCount">) {
-  const { isPinned, notificationCount } = props;
+function Trailing(props: Pick<Inbox, "isPinned" | "notificationsCount">) {
+  const { isPinned, notificationsCount } = props;
 
   return (
     <div className="sidebar-contact__icons">
       {isPinned && <Icon id="pinned" className="sidebar-contact__icon" />}
 
-      {notificationCount !== undefined && notificationCount > 0 && (
-        <UnreadContact>{notificationCount}</UnreadContact>
+      {notificationsCount !== undefined && notificationsCount > 0 && (
+        <UnreadContact>{notificationsCount}</UnreadContact>
       )}
 
       <button aria-label="sidebar-contact__btn">
