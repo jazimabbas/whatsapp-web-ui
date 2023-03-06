@@ -103,6 +103,18 @@ const MessageWrapper = styled.div`
   ${contentStyles}
 `;
 
+const MessageStatusIcon = styled(Icon)<{ isRead?: boolean }>`
+  ${(props) =>
+    props.isRead &&
+    css`
+      color: #0da9e5;
+    `};
+`;
+
+const Subtitle = styled.span`
+  margin-left: 3px;
+`;
+
 const UnreadContact = styled.span`
   display: inline-block;
   color: white !important;
@@ -161,10 +173,11 @@ function Message(props: Pick<Inbox, "messageStatus" | "subTitle">) {
 
   return (
     <>
-      <Icon id={messageStatus === "SENT" ? "singleTick" : "doubleTick"} />
-      <span className={`sidebar-contact__message ${"sidebar-contact__message--unread"}`}>
-        {subTitle}
-      </span>
+      <MessageStatusIcon
+        isRead={messageStatus === "READ"}
+        id={messageStatus === "SENT" ? "singleTick" : "doubleTick"}
+      />
+      <Subtitle>{subTitle}</Subtitle>
     </>
   );
 }
