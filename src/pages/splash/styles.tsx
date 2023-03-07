@@ -62,7 +62,8 @@ export const Progress = styled.div<{ progess: number }>`
     content: "";
     position: absolute;
     height: 100%;
-    background: rgb(0, 216.5, 187.0288);
+    /* background: rgb(0, 216.5, 187.0288); */
+    background: #42CBA5;
     transition: width 2s linear;
 
     ${(props) => css`

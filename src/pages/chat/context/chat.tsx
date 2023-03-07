@@ -19,7 +19,7 @@ const initialValue: ChatContextProp = {
     {
       id: "1",
       name: "John Smith",
-      image: "/assets/images/girl.jpeg",
+      image: "/assets/images/boy1.webp",
       lastMessage: "Testing",
       notificationsCount: 5,
       messageStatus: "SENT",
@@ -29,7 +29,7 @@ const initialValue: ChatContextProp = {
     {
       id: "2",
       name: "Jane Doe",
-      image: "/assets/images/girl.jpeg",
+      image: "/assets/images/boy2.jpeg",
       lastMessage: "Hello there!",
       notificationsCount: 2,
       messageStatus: "SENT",
@@ -40,7 +40,7 @@ const initialValue: ChatContextProp = {
     {
       id: "3",
       name: "Bob Johnson",
-      image: "/assets/images/girl.jpeg",
+      image: "/assets/images/boy3.jpeg",
       lastMessage: "How are you?",
       notificationsCount: 0,
       messageStatus: "READ",
@@ -49,7 +49,7 @@ const initialValue: ChatContextProp = {
     {
       id: "4",
       name: "Samantha Lee",
-      image: "/assets/images/girl.jpeg",
+      image: "/assets/images/girl1.jpeg",
       lastMessage: "See you tomorrow!",
       messageStatus: "SENT",
       timestamp: "09:35",
@@ -57,7 +57,7 @@ const initialValue: ChatContextProp = {
     {
       id: "5",
       name: "William Chen",
-      image: "/assets/images/girl.jpeg",
+      image: "/assets/images/boy4.jpeg",
       lastMessage: "Thanks for your help!",
       messageStatus: "DELIVERED",
       timestamp: "5:22",
@@ -65,7 +65,7 @@ const initialValue: ChatContextProp = {
     {
       id: "6",
       name: "Emily Kim",
-      image: "/assets/images/girl.jpeg",
+      image: "/assets/images/girl2.jpeg",
       lastMessage: "Are you free tonight?",
       messageStatus: "READ",
       timestamp: "4:10",
@@ -74,7 +74,7 @@ const initialValue: ChatContextProp = {
     {
       id: "7",
       name: "David Wong",
-      image: "/assets/images/girl.jpeg",
+      image: "/assets/images/boy5.webp",
       lastMessage: "Let's meet at the park!",
       messageStatus: "SENT",
       timestamp: "13:48",
@@ -91,7 +91,7 @@ const initialValue: ChatContextProp = {
     {
       id: "9",
       name: "Daniel Lee",
-      image: "/assets/images/girl.jpeg",
+      image: "/assets/images/boy6.webp",
       lastMessage: "Can you send me the file?",
       messageStatus: "READ",
       timestamp: "19:03",

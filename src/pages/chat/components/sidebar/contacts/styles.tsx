@@ -122,7 +122,8 @@ export const Subtitle = styled.span`
 export const UnreadContact = styled.span`
   display: inline-block;
   color: white !important;
-  background-color: rgb(6, 215, 85);
+  /* background-color: rgb(6, 215, 85); */
+  background-color: #25D366;
   border-radius: 18px;
   min-width: 18px;
   height: 18px;
