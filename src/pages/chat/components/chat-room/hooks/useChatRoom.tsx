@@ -4,7 +4,7 @@ export default function useChatRoom() {
   const [isShowIcon, setIsShowIcon] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
-  const [shouldScrollToBottom, setShouldScrollToBottom] = useState(true);
+  const [shouldScrollToBottom, setShouldScrollToBottom] = useState(false);
 
   const handleMenuOpen = (menu: "search" | "profile") => {
     setIsSearchOpen(menu === "search" ? true : false);

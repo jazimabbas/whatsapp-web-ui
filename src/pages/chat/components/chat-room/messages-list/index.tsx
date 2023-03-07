@@ -1,3 +1,6 @@
+import { useMemo } from "react";
+import { useParams } from "react-router-dom";
+
 import Icon from "common/components/icons";
 import useScrollToBottom from "./hooks/useScrollToBottom";
 import { getMessages, Message } from "./data/get-messages";
@@ -11,8 +14,6 @@ import {
   EncryptionMessage,
   MessageGroup,
 } from "./styles";
-import { useEffect, useMemo, useState } from "react";
-import { useParams } from "react-router-dom";
 
 type MessagesListProps = {
   onShowBottomIcon: Function;
@@ -23,18 +24,12 @@ export default function MessagesList(props: MessagesListProps) {
   const { onShowBottomIcon, shouldScrollToBottom } = props;
 
   const params = useParams();
-  // const [messages, setMessages] = useState<Message[]>([]);
+  const messages = useMemo(() => getMessages(), [params.id]);
   const { containerRef, lastMessageRef } = useScrollToBottom(
     onShowBottomIcon,
     shouldScrollToBottom,
     params.id
   );
-
-  const messages = useMemo(() => getMessages(), [params.id]);
-
-  // useEffect(() => {
-  //   setMessages(getMessages());
-  // }, [params.id]);
 
   return (
     <Container ref={containerRef}>
@@ -49,7 +44,6 @@ export default function MessagesList(props: MessagesListProps) {
       <MessageGroup>
         {messages.map((message, i) => {
           if (i === messages.length - 1) {
-            console.log("messages length: ", messages.length);
             return (
               <ChatMessage
                 key={message.id}
