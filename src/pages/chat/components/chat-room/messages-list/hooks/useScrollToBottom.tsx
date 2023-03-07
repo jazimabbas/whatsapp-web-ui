@@ -24,6 +24,7 @@ export default function useScrollToBottom(callback: Function, shouldScrollToBott
 
   useEffect(() => {
     if (shouldScrollToBottom && containerRef && containerRef.current) {
+      console.log("should scroll to bottom");
       const ref = containerRef.current as any;
       ref.scrollTop = ref.scrollHeight;
     }
