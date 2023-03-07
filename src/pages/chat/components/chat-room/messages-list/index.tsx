@@ -1,6 +1,6 @@
 import Icon from "common/components/icons";
 import { MessageStatus } from "common/types/common.type";
-import useScrollIcon from "./hooks/useScrollIcon";
+import useScrollToBottom from "./hooks/useScrollToBottom";
 import {
   ChatMessage,
   ChatMessageFiller,
@@ -11,7 +11,6 @@ import {
   EncryptionMessage,
   MessageGroup,
 } from "./styles";
-import { useEffect } from "react";
 
 type Message = {
   id: string;
@@ -128,15 +127,7 @@ type MessagesListProps = {
 
 export default function MessagesList(props: MessagesListProps) {
   const { onShowBottomIcon, shouldScrollToBottom } = props;
-  const containerRef = useScrollIcon(onShowBottomIcon);
-
-  useEffect(() => {
-    console.log("shouldScrollToBottom: ", shouldScrollToBottom);
-    if (shouldScrollToBottom && containerRef && containerRef.current) {
-      const ref = containerRef.current as any;
-      ref.scrollTop = ref.scrollHeight;
-    }
-  }, [shouldScrollToBottom, containerRef]);
+  const containerRef = useScrollToBottom(onShowBottomIcon, shouldScrollToBottom);
 
   return (
     <Container ref={containerRef}>
@@ -181,55 +172,3 @@ function SingleMessage(props: { message: Message }) {
     </ChatMessage>
   );
 }
-
-// const SingleMessage = forwardRef((props: { message: Message; [x: string]: any} => {
-
-//   const { message, ...rest } = props;
-
-//   return (
-//     <ChatMessage
-//       key={message.id}
-//       className={message.isOpponent ? "chat__msg--received" : "chat__msg--sent"}
-//       {...rest}
-//     >
-//       <span>{message.body}</span>
-//       <ChatMessageFiller />
-//       <ChatMessageFooter>
-//         <span>{message.timestamp}</span>
-//         {!message.isOpponent && (
-//           <Icon
-//             id={`${message.messageStatus === "SENT" ? "singleTick" : "doubleTick"}`}
-//             className={`chat__msg-status-icon ${
-//               message.messageStatus === "READ" ? "chat__msg-status-icon--blue" : ""
-//             }`}
-//           />
-//         )}
-//       </ChatMessageFooter>
-//     </ChatMessage>
-//   )
-// })
-
-// const SingleMessage = forwardRef((props: { message: Message; [x: string]: any }) => {
-//   const { message, ...rest } = props;
-
-//   return (
-//     <ChatMessage
-//       key={message.id}
-//       className={message.isOpponent ? "chat__msg--received" : "chat__msg--sent"}
-//       {...rest}
-//     >
-//       <span>{message.body}</span>
-//       <ChatMessageFiller />
-//       <ChatMessageFooter>
-//         <span>{message.timestamp}</span>
-//         {!message.isOpponent && (
-//           <Icon
-//             id={`${message.messageStatus === "SENT" ? "singleTick" : "doubleTick"}`}
-//             className={`chat__msg-status-icon ${
-//               message.messageStatus === "READ" ? "chat__msg-status-icon--blue" : ""
-//             }`}
-//           />
-//         )}
-//       </ChatMessageFooter>
-//     </ChatMessage>
-//   ));
