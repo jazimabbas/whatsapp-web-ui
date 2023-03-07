@@ -22,6 +22,7 @@ export default function useScrollToBottom(
     ref.addEventListener("scroll", _toggleScrollBottomIcon);
 
     return () => ref.removeEventListener("scroll", _toggleScrollBottomIcon);
+    // eslint-disable-next-line
   }, [containerRef, callback]);
 
   const _toggleScrollBottomIcon = () => {
