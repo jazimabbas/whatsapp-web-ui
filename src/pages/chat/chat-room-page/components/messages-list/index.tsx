@@ -24,7 +24,10 @@ export default function MessagesList(props: MessagesListProps) {
   const { onShowBottomIcon, shouldScrollToBottom } = props;
 
   const params = useParams();
-  const messages = useMemo(() => getMessages(), [params.id]);
+  const messages = useMemo(() => {
+    return getMessages();
+    // eslint-disable-next-line
+  }, [params.id]);
   const { containerRef, lastMessageRef } = useScrollToBottom(
     onShowBottomIcon,
     shouldScrollToBottom,
