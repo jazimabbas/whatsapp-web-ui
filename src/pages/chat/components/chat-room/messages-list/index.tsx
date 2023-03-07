@@ -1,5 +1,6 @@
 import Icon from "common/components/icons";
 import { MessageStatus } from "common/types/common.type";
+import useScrollIcon from "./hooks/useScrollIcon";
 import {
   ChatMessage,
   ChatMessageFiller,
@@ -119,9 +120,16 @@ const messages: Message[] = [
   },
 ];
 
-export default function MessagesList() {
+type MessagesListProps = {
+  onShowBottomIcon: Function;
+};
+
+export default function MessagesList(props: MessagesListProps) {
+  const { onShowBottomIcon } = props;
+  const containerRef = useScrollIcon(onShowBottomIcon);
+
   return (
-    <Container>
+    <Container ref={containerRef}>
       <DateWrapper>
         <Date> 19/02/2023 </Date>
       </DateWrapper>

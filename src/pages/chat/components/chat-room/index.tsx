@@ -10,12 +10,17 @@ import SearchSection from "./search-section";
 import { Container, Body, Background, FooterContainer, ScrollButton } from "./styles";
 
 export default function ChatRoom() {
+  const [isShowIcon, setIsShowIcon] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   const handleOpen = (menu: "search" | "profile") => {
     setIsSearchOpen(menu === "search" ? true : false);
     setIsProfileOpen(menu === "profile" ? true : false);
+  };
+
+  const handleShowIcon = (state: boolean) => {
+    setIsShowIcon(state);
   };
 
   return (
@@ -29,11 +34,13 @@ export default function ChatRoom() {
           onSearchClick={() => handleOpen("search")}
           onProfileClick={() => handleOpen("profile")}
         />
-        <MessagesList />
+        <MessagesList onShowBottomIcon={handleShowIcon} />
         <FooterContainer>
-          <ScrollButton>
-            <Icon id="downArrow" />
-          </ScrollButton>
+          {isShowIcon && (
+            <ScrollButton>
+              <Icon id="downArrow" />
+            </ScrollButton>
+          )}
           <Footer />
         </FooterContainer>
       </Body>
