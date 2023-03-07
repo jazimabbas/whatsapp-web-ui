@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import Header from "./header";
 import Footer from "./footer";
 import Sidebar from "./sidebar";
@@ -7,24 +5,21 @@ import ProfileSection from "./profile";
 import Icon from "common/components/icons";
 import MessagesList from "./messages-list";
 import SearchSection from "./search-section";
+import useChatRoom from "./hooks/useChatRoom";
 import { Container, Body, Background, FooterContainer, ScrollButton } from "./styles";
 
 export default function ChatRoom() {
-  const [isShowIcon, setIsShowIcon] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isProfileOpen, setIsProfileOpen] = useState(false);
-  const [shouldScrollToBottom, setShouldScrollToBottom] = useState(true);
-
-  const handleOpen = (menu: "search" | "profile") => {
-    setIsSearchOpen(menu === "search" ? true : false);
-    setIsProfileOpen(menu === "profile" ? true : false);
-  };
-
-  const handleShowIcon = (state: boolean) => {
-    setIsShowIcon(state);
-
-    if (state === false) setShouldScrollToBottom(false);
-  };
+  const {
+    handleMenuOpen,
+    handleShowIcon,
+    isProfileOpen,
+    isSearchOpen,
+    isShowIcon,
+    setIsProfileOpen,
+    setIsSearchOpen,
+    setShouldScrollToBottom,
+    shouldScrollToBottom,
+  } = useChatRoom();
 
   return (
     <Container>
@@ -34,8 +29,8 @@ export default function ChatRoom() {
           title="Jazim"
           subTitle="Online"
           image="/assets/images/girl.jpeg"
-          onSearchClick={() => handleOpen("search")}
-          onProfileClick={() => handleOpen("profile")}
+          onSearchClick={() => handleMenuOpen("search")}
+          onProfileClick={() => handleMenuOpen("profile")}
         />
         <MessagesList
           onShowBottomIcon={handleShowIcon}
