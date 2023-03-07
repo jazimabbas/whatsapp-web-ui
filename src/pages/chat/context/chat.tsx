@@ -113,7 +113,6 @@ export default function ChatProvider(props: { children: any }) {
 
   const handleChangeChat = (chat: Inbox) => {
     setActiveChat(chat);
-    console.log("chat: ", chat);
   };
 
   return (

@@ -8,11 +8,7 @@ const UnSelectedChatPage = React.lazy(() => import("pages/chat/unselected"));
 const router = createBrowserRouter([
   {
     path: "/:id",
-    element: (
-      <ChatProvider>
-        <ChatPage />
-      </ChatProvider>
-    ),
+    element: <ChatPage />,
   },
   {
     path: "/",
@@ -21,5 +17,9 @@ const router = createBrowserRouter([
 ]);
 
 export default function AppRoutes() {
-  return <RouterProvider router={router} />;
+  return (
+    <ChatProvider>
+      <RouterProvider router={router} />
+    </ChatProvider>
+  );
 }

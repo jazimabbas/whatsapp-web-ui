@@ -11,8 +11,8 @@ import {
   EncryptionMessage,
   MessageGroup,
 } from "./styles";
-import { useMemo } from "react";
-import { useChatContext } from "pages/chat/context/chat";
+import { useEffect, useMemo, useState } from "react";
+import { useParams } from "react-router-dom";
 
 type MessagesListProps = {
   onShowBottomIcon: Function;
@@ -22,9 +22,19 @@ type MessagesListProps = {
 export default function MessagesList(props: MessagesListProps) {
   const { onShowBottomIcon, shouldScrollToBottom } = props;
 
-  const chatCtx = useChatContext();
-  const messages = useMemo(() => getMessages(), [chatCtx.activeChat]);
-  const containerRef = useScrollToBottom(onShowBottomIcon, shouldScrollToBottom);
+  const params = useParams();
+  // const [messages, setMessages] = useState<Message[]>([]);
+  const { containerRef, lastMessageRef } = useScrollToBottom(
+    onShowBottomIcon,
+    shouldScrollToBottom,
+    params.id
+  );
+
+  const messages = useMemo(() => getMessages(), [params.id]);
+
+  // useEffect(() => {
+  //   setMessages(getMessages());
+  // }, [params.id]);
 
   return (
     <Container ref={containerRef}>
@@ -37,9 +47,53 @@ export default function MessagesList(props: MessagesListProps) {
         <Date> TODAY </Date>
       </DateWrapper>
       <MessageGroup>
-        {messages.map((message) => (
-          <SingleMessage key={message.id} message={message} />
-        ))}
+        {messages.map((message, i) => {
+          if (i === messages.length - 1) {
+            console.log("messages length: ", messages.length);
+            return (
+              <ChatMessage
+                key={message.id}
+                className={message.isOpponent ? "chat__msg--received" : "chat__msg--sent"}
+                ref={lastMessageRef}
+              >
+                <span>{message.body}</span>
+                <ChatMessageFiller />
+                <ChatMessageFooter>
+                  <span>{message.timestamp}</span>
+                  {!message.isOpponent && (
+                    <Icon
+                      id={`${message.messageStatus === "SENT" ? "singleTick" : "doubleTick"}`}
+                      className={`chat__msg-status-icon ${
+                        message.messageStatus === "READ" ? "chat__msg-status-icon--blue" : ""
+                      }`}
+                    />
+                  )}
+                </ChatMessageFooter>
+              </ChatMessage>
+            );
+          } else {
+            return (
+              <ChatMessage
+                key={message.id}
+                className={message.isOpponent ? "chat__msg--received" : "chat__msg--sent"}
+              >
+                <span>{message.body}</span>
+                <ChatMessageFiller />
+                <ChatMessageFooter>
+                  <span>{message.timestamp}</span>
+                  {!message.isOpponent && (
+                    <Icon
+                      id={`${message.messageStatus === "SENT" ? "singleTick" : "doubleTick"}`}
+                      className={`chat__msg-status-icon ${
+                        message.messageStatus === "READ" ? "chat__msg-status-icon--blue" : ""
+                      }`}
+                    />
+                  )}
+                </ChatMessageFooter>
+              </ChatMessage>
+            );
+          }
+        })}
       </MessageGroup>
     </Container>
   );

@@ -12,9 +12,17 @@ import {
   ImageWrapper,
   SidebarContainer,
 } from "./styles";
+import { Inbox } from "common/types/common.type";
+import { useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
+  const navigate = useNavigate();
   const chatCtx = useChatContext();
+
+  const handleChangeChat = (chat: Inbox) => {
+    chatCtx.onChangeChat(chat);
+    navigate("/" + chat.id);
+  };
 
   return (
     <SidebarContainer>
@@ -54,7 +62,7 @@ export default function Sidebar() {
             key={inbox.id}
             inbox={inbox}
             isActive={inbox.id === chatCtx.activeChat?.id}
-            onChangeChat={chatCtx.onChangeChat}
+            onChangeChat={handleChangeChat}
           />
         ))}
       </ContactContainer>
