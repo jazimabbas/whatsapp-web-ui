@@ -11,6 +11,7 @@ import {
   EncryptionMessage,
   MessageGroup,
 } from "./styles";
+import { useEffect } from "react";
 
 type Message = {
   id: string;
@@ -122,11 +123,20 @@ const messages: Message[] = [
 
 type MessagesListProps = {
   onShowBottomIcon: Function;
+  shouldScrollToBottom?: boolean;
 };
 
 export default function MessagesList(props: MessagesListProps) {
-  const { onShowBottomIcon } = props;
+  const { onShowBottomIcon, shouldScrollToBottom } = props;
   const containerRef = useScrollIcon(onShowBottomIcon);
+
+  useEffect(() => {
+    console.log("shouldScrollToBottom: ", shouldScrollToBottom);
+    if (shouldScrollToBottom && containerRef && containerRef.current) {
+      const ref = containerRef.current as any;
+      ref.scrollTop = ref.scrollHeight;
+    }
+  }, [shouldScrollToBottom, containerRef]);
 
   return (
     <Container ref={containerRef}>
@@ -171,3 +181,55 @@ function SingleMessage(props: { message: Message }) {
     </ChatMessage>
   );
 }
+
+// const SingleMessage = forwardRef((props: { message: Message; [x: string]: any} => {
+
+//   const { message, ...rest } = props;
+
+//   return (
+//     <ChatMessage
+//       key={message.id}
+//       className={message.isOpponent ? "chat__msg--received" : "chat__msg--sent"}
+//       {...rest}
+//     >
+//       <span>{message.body}</span>
+//       <ChatMessageFiller />
+//       <ChatMessageFooter>
+//         <span>{message.timestamp}</span>
+//         {!message.isOpponent && (
+//           <Icon
+//             id={`${message.messageStatus === "SENT" ? "singleTick" : "doubleTick"}`}
+//             className={`chat__msg-status-icon ${
+//               message.messageStatus === "READ" ? "chat__msg-status-icon--blue" : ""
+//             }`}
+//           />
+//         )}
+//       </ChatMessageFooter>
+//     </ChatMessage>
+//   )
+// })
+
+// const SingleMessage = forwardRef((props: { message: Message; [x: string]: any }) => {
+//   const { message, ...rest } = props;
+
+//   return (
+//     <ChatMessage
+//       key={message.id}
+//       className={message.isOpponent ? "chat__msg--received" : "chat__msg--sent"}
+//       {...rest}
+//     >
+//       <span>{message.body}</span>
+//       <ChatMessageFiller />
+//       <ChatMessageFooter>
+//         <span>{message.timestamp}</span>
+//         {!message.isOpponent && (
+//           <Icon
+//             id={`${message.messageStatus === "SENT" ? "singleTick" : "doubleTick"}`}
+//             className={`chat__msg-status-icon ${
+//               message.messageStatus === "READ" ? "chat__msg-status-icon--blue" : ""
+//             }`}
+//           />
+//         )}
+//       </ChatMessageFooter>
+//     </ChatMessage>
+//   ));

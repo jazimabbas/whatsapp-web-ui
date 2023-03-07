@@ -13,6 +13,7 @@ export default function ChatRoom() {
   const [isShowIcon, setIsShowIcon] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [shouldScrollToBottom, setShouldScrollToBottom] = useState(true);
 
   const handleOpen = (menu: "search" | "profile") => {
     setIsSearchOpen(menu === "search" ? true : false);
@@ -21,6 +22,8 @@ export default function ChatRoom() {
 
   const handleShowIcon = (state: boolean) => {
     setIsShowIcon(state);
+
+    if (state === false) setShouldScrollToBottom(false);
   };
 
   return (
@@ -34,10 +37,13 @@ export default function ChatRoom() {
           onSearchClick={() => handleOpen("search")}
           onProfileClick={() => handleOpen("profile")}
         />
-        <MessagesList onShowBottomIcon={handleShowIcon} />
+        <MessagesList
+          onShowBottomIcon={handleShowIcon}
+          shouldScrollToBottom={shouldScrollToBottom}
+        />
         <FooterContainer>
           {isShowIcon && (
-            <ScrollButton>
+            <ScrollButton onClick={() => setShouldScrollToBottom(true)}>
               <Icon id="downArrow" />
             </ScrollButton>
           )}
