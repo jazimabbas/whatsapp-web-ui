@@ -1,5 +1,5 @@
 import Icon from "common/components/icons";
-import OptionsMenu from "../../option-menu";
+import OptionsMenu from "pages/chat/components/option-menu";
 import {
   Action,
   Actions,

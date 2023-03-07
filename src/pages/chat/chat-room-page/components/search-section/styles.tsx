@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import SearchField from "../../search-field";
+import SearchField from "pages/chat/components/search-field";
 
 export const Search = styled(SearchField)`
   /* common styles for bottom border */

@@ -1,10 +1,4 @@
-import ChatLayout from "./layouts";
-import ChatRoom from "./components/chat-room";
+import ChatRoomPage from "./chat-room-page";
+import UnSelectedChatPage from "./unselected-page";
 
-export default function ChatPage() {
-  return (
-    <ChatLayout>
-      <ChatRoom />
-    </ChatLayout>
-  );
-}
+export { ChatRoomPage, UnSelectedChatPage };
