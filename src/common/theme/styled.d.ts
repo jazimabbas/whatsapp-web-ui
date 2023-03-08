@@ -52,6 +52,8 @@ declare module "styled-components" {
       badgeColor: string;
       encryptionMMessageColor: string;
       messageSentColor: string;
+      headerBg: string;
+      headerIconColor: string;
     };
     common: {
       containerColor: string;

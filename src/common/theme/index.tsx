@@ -52,6 +52,8 @@ export const lightTheme: DefaultTheme = {
     badgeColor: "#e1f2fa",
     encryptionMMessageColor: "#fdf4c5",
     messageSentColor: "#dbf8c6",
+    headerBg: "rgb(237, 237, 237)",
+    headerIconColor: "rgb(145, 145, 145)",
   },
   common: {
     containerColor: "white",

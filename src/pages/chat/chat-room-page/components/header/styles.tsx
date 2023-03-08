@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   /* should refactor to header  */
-  background: rgb(237, 237, 237);
+  background: ${props => props.theme.chatRoom.headerBg};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,7 +14,7 @@ export const Container = styled.div`
   z-index: 10;
 
   .icon {
-    color: rgb(145, 145, 145);
+    color: ${props => props.theme.chatRoom.headerIconColor};
   }
 
   .search-icon {
@@ -51,7 +51,7 @@ export const profileStyles = css`
 `;
 
 export const Name = styled.h2`
-  color: #000000;
+  color: ${props => props.theme.common.titleColor};
   font-size: 1rem;
   margin-bottom: 2px;
 
@@ -59,7 +59,7 @@ export const Name = styled.h2`
 `;
 
 export const Subtitle = styled.p`
-  color: #00000099;
+  color: ${props => props.theme.common.subTitleColor};
   font-size: 0.75rem;
 
   ${profileStyles}
