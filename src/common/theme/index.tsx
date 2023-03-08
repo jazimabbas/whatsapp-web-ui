@@ -49,6 +49,9 @@ export const lightTheme: DefaultTheme = {
     profileHeadingColor: "rgb(0, 150, 136)",
     profileDividerColor: "#ebebeb",
     profileActionColor: "rgb(223, 51, 51)",
+    badgeColor: "#e1f2fa",
+    encryptionMMessageColor: "#fdf4c5",
+    messageSentColor: "#dbf8c6",
   },
   common: {
     containerColor: "white",
@@ -58,5 +61,6 @@ export const lightTheme: DefaultTheme = {
     notificationBg: "#25D366",
     infoAlertBg: "#9de1fe",
     borderColor: "#dadada",
+    darkColor: "#000",
   },
 };

@@ -3,13 +3,13 @@ import styled, { css } from "styled-components";
 export const Container = styled.div`
   flex: 1;
   position: relative;
-  background: #e4dcd4;
+  /* background: #e4dcd4; */
   overflow-y: scroll;
   overflow-x: hidden;
   padding: 20px 5% 2pc;
 
   .icon {
-    color: #8c866c;
+    color: ${(props) => props.theme.common.subTitleColor};
     margin-right: 5px;
     margin-bottom: -1px;
   }
@@ -28,17 +28,17 @@ export const DateWrapper = styled.div`
 `;
 
 export const Date = styled.span`
-  background: #e1f2fa;
+  background: ${(props) => props.theme.chatRoom.badgeColor};
   display: inline-block;
-  color: #000000;
+  color: ${(props) => props.theme.common.darkColor};
   font-size: 0.75rem;
   padding: 7px 10px;
   border-radius: 5px;
 `;
 
 export const EncryptionMessage = styled.p`
-  background: #fdf4c5;
-  color: #000000;
+  background: ${(props) => props.theme.chatRoom.encryptionMMessageColor};
+  color: ${(props) => props.theme.common.darkColor};
   font-size: 0.77rem;
   text-align: center;
   padding: 5px 10px;
@@ -59,12 +59,12 @@ export const MessageGroup = styled.div`
   position: relative;
 
   .chat__msg--sent {
-    background: #dbf8c6;
+    background: ${(props) => props.theme.chatRoom.messageSentColor};
     align-self: flex-end;
   }
 
   .chat__msg--received {
-    background: white;
+    background: ${(props) => props.theme.common.containerColor};
     align-self: flex-start;
   }
 
@@ -90,19 +90,19 @@ export const MessageGroup = styled.div`
     width: 0;
     height: 0;
     top: 0;
-    border-top: 6px solid #dbf8c6;
+    border-top: 6px solid ${(props) => props.theme.chatRoom.messageSentColor};
     border-right: 6px solid transparent;
     border-bottom: 6px solid transparent;
-    border-left: 6px solid #dbf8c6;
+    border-left: 6px solid ${(props) => props.theme.chatRoom.messageSentColor};
   }
 
   .chat__msg-status-icon {
-    color: #b3b3b3;
+    color: ${(props) => props.theme.common.subTitleColor};
     margin-left: 3px;
   }
 
   .chat__msg-status-icon--blue {
-    color: #0da9e5;
+    color: ${(props) => props.theme.common.readTickColor};
   }
 `;
 
@@ -110,7 +110,7 @@ export const ChatMessage = styled.div`
   padding: 6px 7px 8px 9px;
   margin-bottom: 12px;
   font-size: 0.85rem;
-  color: #000000;
+  color: ${(props) => props.theme.common.darkColor};
   width: fit-content;
   max-width: 95%;
   line-height: 20px;
@@ -145,7 +145,7 @@ export const ChatMessageFooter = styled.span`
   align-items: center;
   right: 7px;
   bottom: 3px;
-  color: rgba(0, 0, 0, 0.45);
+  color: ${(props) => props.theme.common.subTitleColor};
   font-size: 0.7rem;
   font-weight: 500;
 `;

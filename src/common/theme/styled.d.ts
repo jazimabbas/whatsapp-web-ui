@@ -49,6 +49,9 @@ declare module "styled-components" {
       profileHeadingColor: string;
       profileDividerColor: string;
       profileActionColor: string;
+      badgeColor: string;
+      encryptionMMessageColor: string;
+      messageSentColor: string;
     };
     common: {
       containerColor: string;
@@ -58,6 +61,7 @@ declare module "styled-components" {
       notificationBg: string;
       infoAlertBg: string;
       borderColor: string;
+      darkColor: string;
     };
   }
 }
