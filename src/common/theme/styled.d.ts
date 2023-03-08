@@ -24,6 +24,11 @@ declare module "styled-components" {
       contactColor: string;
       contactIconColor: string;
     };
+    search: {
+      iconColor: string;
+      textColor: string;
+      containerColor: string;
+    };
     common: {
       containerColor: string;
       titleColor: string;

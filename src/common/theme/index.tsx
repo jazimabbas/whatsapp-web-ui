@@ -24,6 +24,11 @@ export const lightTheme: DefaultTheme = {
     contactColor: "#ebebeb",
     contactIconColor: "#b3b3b3",
   },
+  search: {
+    iconColor: "#00a884",
+    containerColor: "rgb(237, 237, 237)",
+    textColor: "#3b4a54",
+  },
   common: {
     containerColor: "white",
     titleColor: "#000000",
