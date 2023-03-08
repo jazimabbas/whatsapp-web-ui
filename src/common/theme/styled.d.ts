@@ -35,6 +35,9 @@ declare module "styled-components" {
       hoverColor: string;
       textColor: string;
     };
+    unselectedChat: {
+      bg: string;
+    };
     common: {
       containerColor: string;
       titleColor: string;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: #f8f9fa;
+  background: ${(props) => props.theme.unselectedChat.bg};
   padding: 20px;
   height: 100%;
   flex: 60%;
@@ -10,7 +10,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-bottom: 6px solid rgb(6, 215, 85);
+  border-bottom: 6px solid ${(props) => props.theme.common.notificationBg};
 `;
 
 export const ImageWrapper = styled.div`
@@ -25,14 +25,14 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.h1`
-  color: #525252;
+  color: ${props => props.theme.common.titleColor};
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 10px;
 `;
 
 export const Text = styled.p`
-  color: rgba(0, 0, 0, 0.45);
+  color: ${props => props.theme.common.subTitleColor};
   font-size: 0.9rem;
   font-weight: 500;
   max-width: 500px;

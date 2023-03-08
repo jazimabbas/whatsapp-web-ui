@@ -35,6 +35,9 @@ export const lightTheme: DefaultTheme = {
     hoverColor: "#f5f5f5",
     textColor: "#000000",
   },
+  unselectedChat: {
+    bg: "#f8f9fa",
+  },
   common: {
     containerColor: "white",
     titleColor: "#000000",
