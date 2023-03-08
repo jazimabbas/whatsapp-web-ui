@@ -23,7 +23,7 @@ const messages: Message[] = [
     body: "sure.",
     date: "20/02/2023",
     timestamp: "09:01",
-    messageStatus: "DELIVERED",
+    messageStatus: "READ",
     isOpponent: false,
   },
   {
@@ -103,7 +103,7 @@ const messages: Message[] = [
     body: "Sounds good to me.",
     date: "28/02/2023",
     timestamp: "14:27",
-    messageStatus: "DELIVERED",
+    messageStatus: "READ",
     isOpponent: false,
   },
   {
@@ -151,7 +151,7 @@ const messages: Message[] = [
     body: "Hey, what's up?",
     date: "02/03/2023",
     timestamp: "16:35",
-    messageStatus: "SENT",
+    messageStatus: "READ",
     isOpponent: false,
   },
   {
@@ -159,7 +159,7 @@ const messages: Message[] = [
     body: "Not much, how about you?",
     date: "02/03/2023",
     timestamp: "16:40",
-    messageStatus: "DELIVERED",
+    messageStatus: "READ",
     isOpponent: true,
   },
   {
@@ -175,7 +175,7 @@ const messages: Message[] = [
     body: "Sounds nice. Any plans for the weekend?",
     date: "03/03/2023",
     timestamp: "09:20",
-    messageStatus: "SENT",
+    messageStatus: "READ",
     isOpponent: true,
   },
   {
