@@ -27,9 +27,9 @@ export default function useScrollToBottom(
 
   const _toggleScrollBottomIcon = () => {
     const { scrollTop, scrollHeight, clientHeight } = containerRef.current as any;
-    const isScrolledBottom = scrollHeight - scrollTop === clientHeight;
+    const isScrolledBottom = scrollHeight - scrollTop - 150 > clientHeight;
 
-    if (!isScrolledBottom) callback(true);
+    if (isScrolledBottom) callback(true);
     else callback(false);
   };
 
