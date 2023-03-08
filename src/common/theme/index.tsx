@@ -44,6 +44,11 @@ export const lightTheme: DefaultTheme = {
     scrollBtnColor: "rgb(145, 145, 145)",
     scrollBtnBoxShadow: "0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2)",
     sectionBg: "rgb(237, 237, 237)",
+    profileBg: "rgb(237, 237, 237)",
+    profileBoxShadow: "rgba(0, 0, 0, 0.08) 0px 1px 3px 0px",
+    profileHeadingColor: "rgb(0, 150, 136)",
+    profileDividerColor: "#ebebeb",
+    profileActionColor: "rgb(223, 51, 51)",
   },
   common: {
     containerColor: "white",

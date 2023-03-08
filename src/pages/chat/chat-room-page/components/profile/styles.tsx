@@ -1,15 +1,15 @@
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
-  background: rgb(237, 237, 237);
+  background: ${(props) => props.theme.chatRoom.profileBg};
   padding-bottom: 2pc;
   height: 100%;
 `;
 
 export const profileSectionStyles = css`
-  background: white;
+  background: ${(props) => props.theme.common.containerColor};
   margin-bottom: 10px;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 3px 0px;
+  box-shadow: ${(props) => props.theme.chatRoom.profileBoxShadow};
   padding: 10px 20px;
 `;
 
@@ -43,7 +43,7 @@ export const Avatar = styled.img`
 
 export const ProfileName = styled.h2`
   flex: 1;
-  color: #000000;
+  color: ${(props) => props.theme.common.titleColor};
   font-size: 1.2rem;
   align-self: center;
 `;
@@ -62,14 +62,14 @@ export const HeadingWrapper = styled.div`
 `;
 
 export const Heading = styled.h2`
-  color: rgb(0, 150, 136);
+  color: ${(props) => props.theme.chatRoom.profileHeadingColor};
   font-size: 0.85rem;
   flex: 1;
 `;
 
 export const MediaButton = styled.button`
   .icon {
-    color: rgb(145, 145, 145);
+    color: ${(props) => props.theme.common.subTitleColor};
   }
 `;
 
@@ -93,12 +93,12 @@ export const AboutItem = styled.li`
   font-weight: 500;
 
   &:not(:last-of-type) {
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid ${(props) => props.theme.chatRoom.profileDividerColor};
   }
 `;
 
 export const ActionSection = styled(Section)`
-  color: rgb(223, 51, 51);
+  color: ${(props) => props.theme.chatRoom.profileActionColor};
   display: flex;
   align-items: center;
   padding-top: 20px;

@@ -44,6 +44,11 @@ declare module "styled-components" {
       scrollBtnBoxShadow: string;
       scrollBtnColor: string;
       sectionBg: string;
+      profileBg: string;
+      profileBoxShadow: string;
+      profileHeadingColor: string;
+      profileDividerColor: string;
+      profileActionColor: string;
     };
     common: {
       containerColor: string;
