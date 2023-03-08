@@ -12,4 +12,8 @@ export const lightTheme: DefaultTheme = {
     subTitleColor: "rgba(0, 0, 0, 0.45)",
     iconColor: "rgba(0, 0, 0, 0.25)",
   },
+  layout: {
+    bg: "#dddbd1",
+    contentBoxShadowColor: "0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2)",
+  },
 };

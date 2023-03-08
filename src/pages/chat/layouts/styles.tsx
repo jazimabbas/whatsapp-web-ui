@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const App = styled.div`
   width: 100%;
   min-height: 100vh;
-  background: #dddbd1;
+  background: ${(props) => props.theme.layout.bg};
   position: relative;
 
   &::before {
@@ -11,7 +11,6 @@ export const App = styled.div`
     /* height: 120px; */
     top: 0;
     left: 0;
-    background: rgb(0, 150, 136);
     position: absolute;
     content: "";
     z-index: 1;
@@ -38,7 +37,7 @@ export const Content = styled.div`
   height: 100vh;
   max-width: 1450px;
   margin: 0 auto;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: ${(props) => props.theme.layout.contentBoxShadowColor};
   position: relative;
   z-index: 100;
   display: flex;

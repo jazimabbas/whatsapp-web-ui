@@ -12,5 +12,9 @@ declare module "styled-components" {
       subTitleColor: string;
       iconColor: string;
     };
+    layout: {
+      bg: string;
+      contentBoxShadowColor: string;
+    };
   }
 }
