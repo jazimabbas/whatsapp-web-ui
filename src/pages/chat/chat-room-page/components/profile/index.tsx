@@ -16,14 +16,21 @@ import {
   Wrapper,
 } from "./styles";
 
-export default function ProfileSection() {
+type ProfileSectionProps = {
+  name: string;
+  image: string;
+};
+
+export default function ProfileSection(props: ProfileSectionProps) {
+  const { name, image } = props;
+
   return (
     <Wrapper>
       <PersonalInfo>
         <AvatarWrapper>
-          <Avatar src="/assets/images/girl.jpeg" alt="User Profile" />
+          <Avatar src={image} alt="User Profile" />
         </AvatarWrapper>
-        <ProfileName>Jazim Abbas</ProfileName>
+        <ProfileName>{name}</ProfileName>
       </PersonalInfo>
 
       <Section>

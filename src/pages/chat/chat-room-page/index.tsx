@@ -11,6 +11,7 @@ import { Container, Body, Background, FooterContainer, ScrollButton } from "./st
 
 export default function ChatRoomPage() {
   const {
+    activeInbox,
     handleMenuOpen,
     handleShowIcon,
     isProfileOpen,
@@ -28,9 +29,9 @@ export default function ChatRoomPage() {
         <Body>
           <Background />
           <Header
-            title="Jazim"
-            subTitle="Online"
-            image="/assets/images/girl.jpeg"
+            title={activeInbox?.name ?? ""}
+            image={activeInbox?.image ?? ""}
+            subTitle={activeInbox?.isOnline ? "Online" : ""}
             onSearchClick={() => handleMenuOpen("search")}
             onProfileClick={() => handleMenuOpen("profile")}
           />
@@ -55,7 +56,7 @@ export default function ChatRoomPage() {
           isOpen={isProfileOpen}
           onClose={() => setIsProfileOpen(false)}
         >
-          <ProfileSection />
+          <ProfileSection name={activeInbox?.name ?? ""} image={activeInbox?.image ?? ""} />
         </Sidebar>
       </Container>
     </ChatLayout>
