@@ -16,5 +16,11 @@ declare module "styled-components" {
       bg: string;
       contentBoxShadowColor: string;
     };
+    sidebar: {
+      borderColor: string;
+      iconColor: string;
+      headerBg: string;
+      contactContainerBg: string;
+    };
   }
 }
