@@ -21,6 +21,15 @@ declare module "styled-components" {
       iconColor: string;
       headerBg: string;
       contactContainerBg: string;
+      contactColor: string;
+      contactIconColor: string;
+    };
+    common: {
+      containerColor: string;
+      titleColor: string;
+      subTitleColor: string;
+      readTickColor: string;
+      notificationBg: string;
     };
   }
 }

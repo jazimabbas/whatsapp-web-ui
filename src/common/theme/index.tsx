@@ -21,5 +21,14 @@ export const lightTheme: DefaultTheme = {
     iconColor: "rgb(145, 145, 145)",
     headerBg: "rgb(237, 237, 237)",
     contactContainerBg: "white",
+    contactColor: "#ebebeb",
+    contactIconColor: "#b3b3b3",
+  },
+  common: {
+    containerColor: "white",
+    titleColor: "#000000",
+    subTitleColor: "#00000099",
+    readTickColor: "#0da9e5",
+    notificationBg: "#25D366",
   },
 };

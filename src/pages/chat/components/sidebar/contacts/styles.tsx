@@ -6,16 +6,16 @@ export const Contact = styled.div<{ isActive?: boolean }>`
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid ${(props) => props.theme.sidebar.contactColor};
   cursor: pointer;
   ${(props) =>
     props.isActive &&
     css`
-      background-color: #ebebeb;
+      background-color: ${(props) => props.theme.sidebar.contactColor};
     `};
 
   &:hover {
-    background-color: #ebebeb;
+    background-color: ${(props) => props.theme.sidebar.contactColor};
   }
 
   .sidebar-contact__icons,
@@ -33,11 +33,11 @@ export const Contact = styled.div<{ isActive?: boolean }>`
 
   .sidebar-contact__icons > * {
     margin-left: 8px;
-    color: #b3b3b3;
+    color: ${(props) => props.theme.sidebar.contactIconColor};
   }
 
   .icon {
-    color: white;
+    color: ${(props) => props.theme.common.containerColor};
   }
 `;
 
@@ -82,7 +82,7 @@ export const messageStyles = css`
 `;
 
 export const Name = styled.h2`
-  color: #000000;
+  color: ${(props) => props.theme.common.titleColor};
   font-size: 1rem;
   font-weight: 500;
 
@@ -91,7 +91,7 @@ export const Name = styled.h2`
 
 export const Time = styled.span`
   font-size: 0.7rem;
-  color: rgba(0, 0, 0, 0.45);
+  color: ${(props) => props.theme.common.subTitleColor};
 `;
 
 export const BottomContent = styled.div`
@@ -99,7 +99,7 @@ export const BottomContent = styled.div`
 `;
 
 export const MessageWrapper = styled.div`
-  color: #00000099;
+  color: ${(props) => props.theme.common.subTitleColor};
   font-size: 0.85rem;
   margin-right: 3px;
   overflow: hidden;
@@ -111,7 +111,7 @@ export const MessageStatusIcon = styled(Icon)<{ isRead?: boolean }>`
   ${(props) =>
     props.isRead &&
     css`
-      color: #0da9e5;
+      color: ${(props) => props.theme.common.readTickColor};
     `};
 `;
 
@@ -121,9 +121,9 @@ export const Subtitle = styled.span`
 
 export const UnreadContact = styled.span`
   display: inline-block;
-  color: white !important;
+  color: ${(props) => props.theme.common.containerColor} !important;
   /* background-color: rgb(6, 215, 85); */
-  background-color: #25D366;
+  background-color: ${(props) => props.theme.common.notificationBg};
   border-radius: 18px;
   min-width: 18px;
   height: 18px;
