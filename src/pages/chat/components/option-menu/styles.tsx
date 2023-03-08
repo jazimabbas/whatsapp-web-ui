@@ -12,7 +12,7 @@ export const Button = styled.button`
 
   &.btn-pressed {
     border-radius: 50%;
-    background: #d5d5d5;
+    background: ${(props) => props.theme.options.bg};
   }
 `;
 
@@ -23,9 +23,9 @@ export const Options = styled.ul`
   position: absolute;
   width: 200px;
   padding: 10px 0;
-  background-color: white;
+  background-color: ${(props) => props.theme.common.containerColor};
   border-radius: 3px;
-  box-shadow: 0 2px 5px 0 #00000042, 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: ${(props) => props.theme.options.boxShadow};
   transition: all 0.2s ease-in;
   opacity: 0;
   transform: scale(0);
@@ -43,11 +43,11 @@ export const Options = styled.ul`
 
 export const Option = styled.li`
   padding: 15px 20px;
-  color: #000000;
+  color: ${(props) => props.theme.options.textColor};
   font-size: 0.9rem;
   cursor: pointer;
 
   &:hover {
-    background: #f5f5f5;
+    background: ${(props) => props.theme.options.hoverColor};
   }
 `;

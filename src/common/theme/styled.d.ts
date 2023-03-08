@@ -29,6 +29,12 @@ declare module "styled-components" {
       textColor: string;
       containerColor: string;
     };
+    options: {
+      bg: string;
+      boxShadow: string;
+      hoverColor: string;
+      textColor: string;
+    };
     common: {
       containerColor: string;
       titleColor: string;

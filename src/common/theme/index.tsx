@@ -29,6 +29,12 @@ export const lightTheme: DefaultTheme = {
     containerColor: "rgb(237, 237, 237)",
     textColor: "#3b4a54",
   },
+  options: {
+    boxShadow: "0 2px 5px 0 #00000042, 0 2px 10px 0 rgba(0, 0, 0, 0.16)",
+    bg: "#d5d5d5",
+    hoverColor: "#f5f5f5",
+    textColor: "#000000",
+  },
   common: {
     containerColor: "white",
     titleColor: "#000000",
