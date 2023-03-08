@@ -30,6 +30,7 @@ declare module "styled-components" {
       subTitleColor: string;
       readTickColor: string;
       notificationBg: string;
+      infoAlertBg: string;
     };
   }
 }

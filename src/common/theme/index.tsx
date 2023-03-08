@@ -30,5 +30,6 @@ export const lightTheme: DefaultTheme = {
     subTitleColor: "#00000099",
     readTickColor: "#0da9e5",
     notificationBg: "#25D366",
+    infoAlertBg: "#9de1fe",
   },
 };
