@@ -27,7 +27,7 @@ export const Container = styled.aside<{ readonly isOpen: boolean }>`
 
 export const Header = styled.header`
   /* common header */
-  background: rgb(237, 237, 237);
+  background: ${(props) => props.theme.chatRoom.sectionBg};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,14 +39,14 @@ export const Header = styled.header`
 
 export const CloseButton = styled.button<{ onClick: any }>`
   .icon {
-    color: rgb(145, 145, 145);
+    color: ${(props) => props.theme.common.subTitleColor};
     margin-right: 10px;
   }
 `;
 
 export const Heading = styled.h2`
   flex: 1;
-  color: #000000;
+  color: ${(props) => props.theme.common.titleColor};
   font-size: 1rem;
   margin-bottom: 2px;
 `;

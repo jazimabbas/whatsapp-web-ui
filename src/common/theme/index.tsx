@@ -43,6 +43,7 @@ export const lightTheme: DefaultTheme = {
     footerBg: "rgb(240, 240, 240)",
     scrollBtnColor: "rgb(145, 145, 145)",
     scrollBtnBoxShadow: "0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2)",
+    sectionBg: "rgb(237, 237, 237)",
   },
   common: {
     containerColor: "white",

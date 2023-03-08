@@ -43,6 +43,7 @@ declare module "styled-components" {
       footerBg: string;
       scrollBtnBoxShadow: string;
       scrollBtnColor: string;
+      sectionBg: string;
     };
     common: {
       containerColor: string;
