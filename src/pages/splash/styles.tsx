@@ -2,7 +2,7 @@ import Icon from "common/components/icons";
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  background: rgb(240, 240, 240);
+  background: ${(props) => props.theme.splash.bg};
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -20,15 +20,7 @@ export const LogoWrapper = styled.div`
     bottom: 0;
     top: 0;
     width: 100px;
-    background: linear-gradient(
-      90deg,
-      rgba(240, 240, 240, 0.5) 0,
-      rgba(240, 240, 240, 0.5) 33.33%,
-      rgba(240, 240, 240, 0) 44.1%,
-      rgba(240, 240, 240, 0) 55.8%,
-      rgba(240, 240, 240, 0.5) 66.66%,
-      rgba(240, 240, 240, 0.5)
-    );
+    background: ${(props) => props.theme.splash.gradient}
     animation: glisten 2s ease-in 0.8s infinite;
   }
 
@@ -44,7 +36,7 @@ export const LogoWrapper = styled.div`
 
 export const Logo = styled(Icon)`
   z-index: 3;
-  fill: rgb(191, 191, 191);
+  fill: ${(props) => props.theme.splash.logoFill};
   width: 60px;
   height: 60px;
 `;
@@ -55,7 +47,7 @@ export const Progress = styled.div<{ progess: number }>`
   height: 4px;
   width: 90%;
   margin: 20px auto 30px;
-  background: rgb(230, 230, 230);
+  background: ${(props) => props.theme.splash.progressBg};
   position: relative;
 
   &::after {
@@ -63,7 +55,7 @@ export const Progress = styled.div<{ progess: number }>`
     position: absolute;
     height: 100%;
     /* background: rgb(0, 216.5, 187.0288); */
-    background: #42CBA5;
+    background: ${(props) => props.theme.splash.progressAfterBg};
     transition: width 2s linear;
 
     ${(props) => css`
@@ -73,19 +65,19 @@ export const Progress = styled.div<{ progess: number }>`
 `;
 
 export const Title = styled.h1`
-  color: #525252;
+  color: ${(props) => props.theme.splash.titleColor};
   font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 10px;
 `;
 
 export const SubTitle = styled.p`
-  color: rgba(0, 0, 0, 0.45);
+  color: ${(props) => props.theme.splash.subTitleColor};
   font-size: 0.85rem;
 `;
 
 export const EncryptionIcon = styled(Icon)`
-  color: rgba(0, 0, 0, 0.25);
+  color: ${(props) => props.theme.splash.iconColor};
 `;
 
 export const Link = styled.a`
