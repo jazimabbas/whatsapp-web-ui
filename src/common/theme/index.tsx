@@ -62,7 +62,35 @@ export const lightTheme: DefaultTheme = {
     readTickColor: "#0da9e5",
     notificationBg: "#25D366",
     infoAlertBg: "#9de1fe",
-    borderColor: "#dadada",
     darkColor: "#000",
+    
+    borderColor: "#dadada",
+    primaryColor: "rgb(237, 237, 237)",
+    mainHeadingColor: "#000000",
+    subHeadingColor: "#00000099",
+    secondaryColor: "white",
+    tertiaryColor: "#25D366",
+    readIconColor: "#0da9e5",
+    unreadIconColor: "#b3b3b3",
+  },
+  alert: {
+    infoColor: "#9de1fe",
+    iconContainerColor: "white",
+  },
+  badge: {
+    textColor: "#000",
+    bgColor: "#e1f2fa",
+  },
+  sentMessage: {
+    textColor: "#000",
+    bgColor: "#dbf8c6",
+  },
+  receivedMessage: {
+    textColor: "#000",
+    bgColor: "rgb(237, 237, 237)",
+  },
+  encryptionMessage: {
+    bgColor: "fdf4c5",
+    textColor: "#000",
   },
 };

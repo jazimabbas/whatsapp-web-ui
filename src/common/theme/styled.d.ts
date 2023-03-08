@@ -64,6 +64,34 @@ declare module "styled-components" {
       infoAlertBg: string;
       borderColor: string;
       darkColor: string;
+
+      primaryColor: string;
+      mainHeadingColor: string;
+      subHeadingColor: string;
+      secondaryColor: string;
+      tertiaryColor: string;
+      readIconColor: string;
+      unreadIconColor: string;
+    };
+    alert: {
+      infoColor: string;
+      iconContainerColor: string;
+    };
+    badge: {
+      textColor: string;
+      bgColor: string;
+    };
+    sentMessage: {
+      textColor: string;
+      bgColor: string;
+    };
+    receivedMessage: {
+      textColor: string;
+      bgColor: string;
+    };
+    encryptionMessage: {
+      textColor: string;
+      bgColor: string;
     };
   }
 }

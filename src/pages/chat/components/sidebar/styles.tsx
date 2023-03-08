@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SidebarContainer = styled.aside`
   min-width: 300px;
   flex: 40%;
-  border-right: 1px solid ${(props) => props.theme.sidebar.borderColor};
+  border-right: 1px solid ${(props) => props.theme.common.borderColor};
   display: flex;
   flex-direction: column;
 
@@ -24,12 +24,12 @@ export const SidebarContainer = styled.aside`
   }
 
   .icon {
-    color: ${(props) => props.theme.sidebar.iconColor};
+    color: ${(props) => props.theme.common.subHeadingColor};
   }
 `;
 
 export const Header = styled.header`
-  background: ${(props) => props.theme.sidebar.headerBg};
+  background: ${(props) => props.theme.common.primaryColor};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,6 +63,6 @@ export const Actions = styled.div`
 export const ContactContainer = styled.div`
   flex: 1;
   overflow-y: scroll;
-  background: ${(props) => props.theme.sidebar.contactContainerBg};
-  border-top: 1px solid ${(props) => props.theme.sidebar.borderColor};
+  background: ${(props) => props.theme.common.secondaryColor};
+  border-top: 1px solid ${(props) => props.theme.common.borderColor};
 `;
