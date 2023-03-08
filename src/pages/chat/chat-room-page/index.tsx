@@ -7,6 +7,7 @@ import useChatRoom from "./hooks/useChatRoom";
 import ProfileSection from "./components/profile";
 import MessagesList from "./components/messages-list";
 import SearchSection from "./components/search-section";
+import useNavigateToChat from "./hooks/useNavigateToChat";
 import { Container, Body, Background, FooterContainer, ScrollButton } from "./styles";
 
 export default function ChatRoomPage() {
@@ -22,6 +23,7 @@ export default function ChatRoomPage() {
     setShouldScrollToBottom,
     shouldScrollToBottom,
   } = useChatRoom();
+  useNavigateToChat(activeInbox);
 
   return (
     <ChatLayout>
