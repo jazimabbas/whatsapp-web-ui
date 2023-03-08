@@ -1,5 +1,5 @@
 import Sidebar from "../components/sidebar";
-import { App, Content, Message } from "../styles";
+import { App, Content, Message } from "./styles";
 
 export default function ChatLayout(props: { children: any }) {
   return (
