@@ -22,18 +22,21 @@ export const lightTheme: DefaultTheme = {
     headerBg: "rgb(237, 237, 237)",
     contactContainerBg: "white",
     contactColor: "#ebebeb",
+
     contactIconColor: "#b3b3b3",
   },
   search: {
-    iconColor: "#00a884",
     containerColor: "rgb(237, 237, 237)",
     textColor: "#3b4a54",
+
+    iconColor: "#00a884",
   },
   options: {
-    boxShadow: "0 2px 5px 0 #00000042, 0 2px 10px 0 rgba(0, 0, 0, 0.16)",
-    bg: "#d5d5d5",
     hoverColor: "#f5f5f5",
     textColor: "#000000",
+    
+    bg: "#d5d5d5",
+    boxShadow: "0 2px 5px 0 #00000042, 0 2px 10px 0 rgba(0, 0, 0, 0.16)",
   },
   unselectedChat: {
     bg: "#f8f9fa",
@@ -63,7 +66,7 @@ export const lightTheme: DefaultTheme = {
     notificationBg: "#25D366",
     infoAlertBg: "#9de1fe",
     darkColor: "#000",
-    
+
     borderColor: "#dadada",
     primaryColor: "rgb(237, 237, 237)",
     mainHeadingColor: "#000000",

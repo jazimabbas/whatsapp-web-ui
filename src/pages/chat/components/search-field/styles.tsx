@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SearchWrapper = styled.div`
   padding: 7px 10px;
   height: 50px;
-  background: ${(props) => props.theme.common.containerColor};
+  background: ${(props) => props.theme.common.secondaryColor};
   position: relative;
 
   .search-icon {
@@ -51,8 +51,8 @@ export const IconContainer = styled.div`
 `;
 
 export const Input = styled.input`
-  background: ${props => props.theme.search.containerColor};
-  color: ${props => props.theme.search.textColor};
+  background: ${props => props.theme.common.primaryColor};
+  color: ${props => props.theme.common.subHeadingColor};
   padding-left: 60px;
   border-radius: 10px;
   width: 100%;
@@ -60,7 +60,7 @@ export const Input = styled.input`
 
   &::placeholder {
     /* color: rgb(74, 74, 74); */
-    color: ${props => props.theme.search.textColor};
+    color: ${props => props.theme.common.subHeadingColor};
   }
 
   &:focus {

@@ -5,7 +5,7 @@ export const AlertContainer = styled.div`
   padding: 20px;
   display: flex;
   align-items: center;
-  background: ${(props) => props.theme.common.infoAlertBg};
+  background: ${(props) => props.theme.alert.infoColor};
   position: relative;
 
   .underline {
@@ -26,7 +26,7 @@ export const IconWrapper = styled.div`
   margin-right: 10px;
 
   .icon {
-    color: ${(props) => props.theme.common.containerColor} !important;
+    color: ${(props) => props.theme.common.secondaryColor} !important;
   }
 `;
 
@@ -38,12 +38,12 @@ export const Text = styled.p`
   &:first-of-type {
     font-size: 1rem;
     margin-bottom: 5px;
-    color: ${props => props.theme.common.titleColor};
+    color: ${props => props.theme.common.mainHeadingColor};
   }
 
   &:last-of-type {
     font-size: 0.85rem;
-    color: ${props => props.theme.common.subTitleColor};
+    color: ${props => props.theme.common.subHeadingColor};
     line-height: 17px;
   }
 `;

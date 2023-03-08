@@ -6,16 +6,16 @@ export const Contact = styled.div<{ isActive?: boolean }>`
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid ${(props) => props.theme.sidebar.contactColor};
+  border-bottom: 1px solid ${(props) => props.theme.common.primaryColor};
   cursor: pointer;
   ${(props) =>
     props.isActive &&
     css`
-      background-color: ${(props) => props.theme.sidebar.contactColor};
+      background-color: ${(props) => props.theme.common.primaryColor};
     `};
 
   &:hover {
-    background-color: ${(props) => props.theme.sidebar.contactColor};
+    background-color: ${(props) => props.theme.common.primaryColor};
   }
 
   .sidebar-contact__icons,
@@ -37,7 +37,7 @@ export const Contact = styled.div<{ isActive?: boolean }>`
   }
 
   .icon {
-    color: ${(props) => props.theme.common.containerColor};
+    color: ${(props) => props.theme.common.primaryColor};
   }
 `;
 
@@ -82,7 +82,7 @@ export const messageStyles = css`
 `;
 
 export const Name = styled.h2`
-  color: ${(props) => props.theme.common.titleColor};
+  color: ${(props) => props.theme.common.mainHeadingColor};
   font-size: 1rem;
   font-weight: 500;
 
@@ -91,7 +91,7 @@ export const Name = styled.h2`
 
 export const Time = styled.span`
   font-size: 0.7rem;
-  color: ${(props) => props.theme.common.subTitleColor};
+  color: ${(props) => props.theme.common.subHeadingColor};
 `;
 
 export const BottomContent = styled.div`
@@ -99,7 +99,7 @@ export const BottomContent = styled.div`
 `;
 
 export const MessageWrapper = styled.div`
-  color: ${(props) => props.theme.common.subTitleColor};
+  color: ${(props) => props.theme.common.subHeadingColor};
   font-size: 0.85rem;
   margin-right: 3px;
   overflow: hidden;
@@ -111,7 +111,7 @@ export const MessageStatusIcon = styled(Icon)<{ isRead?: boolean }>`
   ${(props) =>
     props.isRead &&
     css`
-      color: ${(props) => props.theme.common.readTickColor};
+      color: ${(props) => props.theme.common.readIconColor};
     `};
 `;
 
@@ -121,9 +121,8 @@ export const Subtitle = styled.span`
 
 export const UnreadContact = styled.span`
   display: inline-block;
-  color: ${(props) => props.theme.common.containerColor} !important;
-  /* background-color: rgb(6, 215, 85); */
-  background-color: ${(props) => props.theme.common.notificationBg};
+  color: ${(props) => props.theme.common.secondaryColor} !important;
+  background-color: ${(props) => props.theme.common.tertiaryColor};
   border-radius: 18px;
   min-width: 18px;
   height: 18px;

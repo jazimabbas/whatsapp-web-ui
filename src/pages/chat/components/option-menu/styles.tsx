@@ -23,7 +23,7 @@ export const Options = styled.ul`
   position: absolute;
   width: 200px;
   padding: 10px 0;
-  background-color: ${(props) => props.theme.common.containerColor};
+  background-color: ${(props) => props.theme.common.secondaryColor};
   border-radius: 3px;
   box-shadow: ${(props) => props.theme.options.boxShadow};
   transition: all 0.2s ease-in;
@@ -43,11 +43,11 @@ export const Options = styled.ul`
 
 export const Option = styled.li`
   padding: 15px 20px;
-  color: ${(props) => props.theme.options.textColor};
+  color: ${(props) => props.theme.common.mainHeadingColor};
   font-size: 0.9rem;
   cursor: pointer;
 
   &:hover {
-    background: ${(props) => props.theme.options.hoverColor};
+    background: ${(props) => props.theme.common.primaryColor};
   }
 `;
