@@ -38,6 +38,12 @@ declare module "styled-components" {
     unselectedChat: {
       bg: string;
     };
+    chatRoom: {
+      bg: string;
+      footerBg: string;
+      scrollBtnBoxShadow: string;
+      scrollBtnColor: string;
+    };
     common: {
       containerColor: string;
       titleColor: string;
@@ -45,6 +51,7 @@ declare module "styled-components" {
       readTickColor: string;
       notificationBg: string;
       infoAlertBg: string;
+      borderColor: string;
     };
   }
 }

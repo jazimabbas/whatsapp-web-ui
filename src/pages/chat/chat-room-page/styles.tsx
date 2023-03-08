@@ -8,7 +8,7 @@ export const Container = styled.div`
 export const Body = styled.div`
   min-width: 300px;
   flex: 40%;
-  border-right: 1px solid #dadada;
+  border-right: 1px solid ${(props) => props.theme.common.borderColor};
   display: flex;
   flex-direction: column;
   position: relative;
@@ -23,11 +23,11 @@ export const Background = styled.div`
   bottom: 0;
   opacity: 0.05;
   z-index: 1;
-  background: url("/assets/images/bg-chat-room-light.png") #e4dcd4;
+  background: url("/assets/images/bg-chat-room-light.png") ${(props) => props.theme.chatRoom.bg};
 `;
 
 export const FooterContainer = styled.div`
-  background: rgb(240, 240, 240);
+  background: ${(props) => props.theme.chatRoom.footerBg};
   position: relative;
   z-index: 100;
 `;
@@ -40,11 +40,11 @@ export const ScrollButton = styled.button`
   height: 42px;
   z-index: -1;
   border-radius: 50%;
-  color: rgb(145, 145, 145);
+  color: ${(props) => props.theme.chatRoom.scrollBtnColor};
   display: flex;
   justify-content: center;
   align-items: center;
   background: #ffffff;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: ${(props) => props.theme.chatRoom.scrollBtnBoxShadow};
   z-index: 10;
 `;

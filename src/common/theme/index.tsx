@@ -38,6 +38,12 @@ export const lightTheme: DefaultTheme = {
   unselectedChat: {
     bg: "#f8f9fa",
   },
+  chatRoom: {
+    bg: "#e4dcd4",
+    footerBg: "rgb(240, 240, 240)",
+    scrollBtnColor: "rgb(145, 145, 145)",
+    scrollBtnBoxShadow: "0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2)",
+  },
   common: {
     containerColor: "white",
     titleColor: "#000000",
@@ -45,5 +51,6 @@ export const lightTheme: DefaultTheme = {
     readTickColor: "#0da9e5",
     notificationBg: "#25D366",
     infoAlertBg: "#9de1fe",
+    borderColor: "#dadada",
   },
 };
