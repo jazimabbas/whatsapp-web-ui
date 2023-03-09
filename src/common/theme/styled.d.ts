@@ -17,53 +17,26 @@ declare module "styled-components" {
       contentBoxShadowColor: string;
     };
     sidebar: {
-      borderColor: string;
-      iconColor: string;
-      headerBg: string;
-      contactContainerBg: string;
-      contactColor: string;
-      contactIconColor: string;
     };
     search: {
       iconColor: string;
-      textColor: string;
-      containerColor: string;
     };
     options: {
       bg: string;
       boxShadow: string;
-      hoverColor: string;
-      textColor: string;
     };
     unselectedChat: {
       bg: string;
     };
     chatRoom: {
       bg: string;
-      footerBg: string;
       scrollBtnBoxShadow: string;
-      scrollBtnColor: string;
-      sectionBg: string;
-      profileBg: string;
       profileBoxShadow: string;
       profileHeadingColor: string;
-      profileDividerColor: string;
       profileActionColor: string;
-      badgeColor: string;
-      encryptionMMessageColor: string;
-      messageSentColor: string;
-      headerBg: string;
     };
     common: {
-      containerColor: string;
-      titleColor: string;
-      subTitleColor: string;
-      readTickColor: string;
-      notificationBg: string;
-      infoAlertBg: string;
       borderColor: string;
-      darkColor: string;
-
       primaryColor: string;
       mainHeadingColor: string;
       subHeadingColor: string;
