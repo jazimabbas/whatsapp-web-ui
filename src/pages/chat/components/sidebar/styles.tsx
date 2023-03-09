@@ -24,7 +24,7 @@ export const SidebarContainer = styled.aside`
   }
 
   .icon {
-    color: ${(props) => props.theme.common.subHeadingColor};
+    color: ${(props) => props.theme.common.headerIconColor};
   }
 `;
 

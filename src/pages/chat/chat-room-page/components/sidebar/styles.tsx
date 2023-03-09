@@ -27,7 +27,7 @@ export const Container = styled.aside<{ readonly isOpen: boolean }>`
 
 export const Header = styled.header`
   /* common header */
-  background: ${(props) => props.theme.chatRoom.sectionBg};
+  background: ${(props) => props.theme.common.primaryColor};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,14 +39,14 @@ export const Header = styled.header`
 
 export const CloseButton = styled.button<{ onClick: any }>`
   .icon {
-    color: ${(props) => props.theme.common.subTitleColor};
+    color: ${(props) => props.theme.common.subHeadingColor};
     margin-right: 10px;
   }
 `;
 
 export const Heading = styled.h2`
   flex: 1;
-  color: ${(props) => props.theme.common.titleColor};
+  color: ${(props) => props.theme.common.mainHeadingColor};
   font-size: 1rem;
   margin-bottom: 2px;
 `;

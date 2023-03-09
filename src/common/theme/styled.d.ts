@@ -53,7 +53,6 @@ declare module "styled-components" {
       encryptionMMessageColor: string;
       messageSentColor: string;
       headerBg: string;
-      headerIconColor: string;
     };
     common: {
       containerColor: string;
@@ -72,6 +71,7 @@ declare module "styled-components" {
       tertiaryColor: string;
       readIconColor: string;
       unreadIconColor: string;
+      headerIconColor: string;
     };
     alert: {
       infoColor: string;

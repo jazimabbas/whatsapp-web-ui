@@ -34,7 +34,7 @@ export const lightTheme: DefaultTheme = {
   options: {
     hoverColor: "#f5f5f5",
     textColor: "#000000",
-    
+
     bg: "#d5d5d5",
     boxShadow: "0 2px 5px 0 #00000042, 0 2px 10px 0 rgba(0, 0, 0, 0.16)",
   },
@@ -42,21 +42,21 @@ export const lightTheme: DefaultTheme = {
     bg: "#f8f9fa",
   },
   chatRoom: {
-    bg: "#e4dcd4",
     footerBg: "rgb(240, 240, 240)",
     scrollBtnColor: "rgb(145, 145, 145)",
-    scrollBtnBoxShadow: "0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2)",
     sectionBg: "rgb(237, 237, 237)",
     profileBg: "rgb(237, 237, 237)",
-    profileBoxShadow: "rgba(0, 0, 0, 0.08) 0px 1px 3px 0px",
-    profileHeadingColor: "rgb(0, 150, 136)",
     profileDividerColor: "#ebebeb",
-    profileActionColor: "rgb(223, 51, 51)",
     badgeColor: "#e1f2fa",
     encryptionMMessageColor: "#fdf4c5",
     messageSentColor: "#dbf8c6",
     headerBg: "rgb(237, 237, 237)",
-    headerIconColor: "rgb(145, 145, 145)",
+
+    bg: "#e4dcd4",
+    scrollBtnBoxShadow: "0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2)",
+    profileBoxShadow: "rgba(0, 0, 0, 0.08) 0px 1px 3px 0px",
+    profileHeadingColor: "rgb(0, 150, 136)",
+    profileActionColor: "rgb(223, 51, 51)",
   },
   common: {
     containerColor: "white",
@@ -75,6 +75,7 @@ export const lightTheme: DefaultTheme = {
     tertiaryColor: "#25D366",
     readIconColor: "#0da9e5",
     unreadIconColor: "#b3b3b3",
+    headerIconColor: "rgb(145, 145, 145)",
   },
   alert: {
     infoColor: "#9de1fe",
@@ -90,10 +91,10 @@ export const lightTheme: DefaultTheme = {
   },
   receivedMessage: {
     textColor: "#000",
-    bgColor: "rgb(237, 237, 237)",
+    bgColor: "white",
   },
   encryptionMessage: {
-    bgColor: "fdf4c5",
+    bgColor: "#fdf4c5",
     textColor: "#000",
   },
 };

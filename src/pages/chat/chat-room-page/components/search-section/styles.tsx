@@ -11,7 +11,7 @@ export const Content = styled.div`
   background: white;
   height: 100%;
   padding-top: 5pc;
-  color: ${props => props.theme.common.titleColor};
+  color: ${props => props.theme.common.mainHeadingColor};
   text-align: center;
   font-size: 0.85rem;
 `;

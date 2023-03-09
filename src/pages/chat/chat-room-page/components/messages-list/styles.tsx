@@ -9,7 +9,7 @@ export const Container = styled.div`
   padding: 20px 5% 2pc;
 
   .icon {
-    color: ${(props) => props.theme.common.subTitleColor};
+    color: ${(props) => props.theme.common.subHeadingColor};
     margin-right: 5px;
     margin-bottom: -1px;
   }
@@ -28,17 +28,17 @@ export const DateWrapper = styled.div`
 `;
 
 export const Date = styled.span`
-  background: ${(props) => props.theme.chatRoom.badgeColor};
+  background: ${(props) => props.theme.badge.bgColor};
   display: inline-block;
-  color: ${(props) => props.theme.common.darkColor};
+  color: ${(props) => props.theme.badge.textColor};
   font-size: 0.75rem;
   padding: 7px 10px;
   border-radius: 5px;
 `;
 
 export const EncryptionMessage = styled.p`
-  background: ${(props) => props.theme.chatRoom.encryptionMMessageColor};
-  color: ${(props) => props.theme.common.darkColor};
+  background: ${(props) => props.theme.encryptionMessage.bgColor};
+  color: ${(props) => props.theme.encryptionMessage.textColor};
   font-size: 0.77rem;
   text-align: center;
   padding: 5px 10px;
@@ -59,12 +59,12 @@ export const MessageGroup = styled.div`
   position: relative;
 
   .chat__msg--sent {
-    background: ${(props) => props.theme.chatRoom.messageSentColor};
+    background: ${(props) => props.theme.sentMessage.bgColor};
     align-self: flex-end;
   }
 
   .chat__msg--received {
-    background: ${(props) => props.theme.common.containerColor};
+    background: ${(props) => props.theme.receivedMessage.bgColor};
     align-self: flex-start;
   }
 
@@ -90,19 +90,19 @@ export const MessageGroup = styled.div`
     width: 0;
     height: 0;
     top: 0;
-    border-top: 6px solid ${(props) => props.theme.chatRoom.messageSentColor};
+    border-top: 6px solid ${(props) => props.theme.sentMessage.bgColor};
     border-right: 6px solid transparent;
     border-bottom: 6px solid transparent;
-    border-left: 6px solid ${(props) => props.theme.chatRoom.messageSentColor};
+    border-left: 6px solid ${(props) => props.theme.sentMessage.bgColor};
   }
 
   .chat__msg-status-icon {
-    color: ${(props) => props.theme.common.subTitleColor};
+    color: ${(props) => props.theme.common.subHeadingColor};
     margin-left: 3px;
   }
 
   .chat__msg-status-icon--blue {
-    color: ${(props) => props.theme.common.readTickColor};
+    color: ${(props) => props.theme.common.readIconColor};
   }
 `;
 
@@ -110,7 +110,7 @@ export const ChatMessage = styled.div`
   padding: 6px 7px 8px 9px;
   margin-bottom: 12px;
   font-size: 0.85rem;
-  color: ${(props) => props.theme.common.darkColor};
+  color: ${(props) => props.theme.common.mainHeadingColor};
   width: fit-content;
   max-width: 95%;
   line-height: 20px;
@@ -145,7 +145,7 @@ export const ChatMessageFooter = styled.span`
   align-items: center;
   right: 7px;
   bottom: 3px;
-  color: ${(props) => props.theme.common.subTitleColor};
+  color: ${(props) => props.theme.common.subHeadingColor};
   font-size: 0.7rem;
   font-weight: 500;
 `;

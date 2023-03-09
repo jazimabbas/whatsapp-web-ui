@@ -27,7 +27,7 @@ export const Background = styled.div`
 `;
 
 export const FooterContainer = styled.div`
-  background: ${(props) => props.theme.chatRoom.footerBg};
+  background: ${(props) => props.theme.common.primaryColor};
   position: relative;
   z-index: 100;
 `;
@@ -40,11 +40,11 @@ export const ScrollButton = styled.button`
   height: 42px;
   z-index: -1;
   border-radius: 50%;
-  color: ${(props) => props.theme.chatRoom.scrollBtnColor};
+  color: ${(props) => props.theme.common.subHeadingColor};
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ffffff;
+  background: ${(props) => props.theme.common.secondaryColor};
   box-shadow: ${(props) => props.theme.chatRoom.scrollBtnBoxShadow};
   z-index: 10;
 `;

@@ -1,13 +1,13 @@
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
-  background: ${(props) => props.theme.chatRoom.profileBg};
+  background: ${(props) => props.theme.common.primaryColor};
   padding-bottom: 2pc;
   height: 100%;
 `;
 
 export const profileSectionStyles = css`
-  background: ${(props) => props.theme.common.containerColor};
+  background: ${(props) => props.theme.common.secondaryColor};
   margin-bottom: 10px;
   box-shadow: ${(props) => props.theme.chatRoom.profileBoxShadow};
   padding: 10px 20px;
@@ -43,7 +43,7 @@ export const Avatar = styled.img`
 
 export const ProfileName = styled.h2`
   flex: 1;
-  color: ${(props) => props.theme.common.titleColor};
+  color: ${(props) => props.theme.common.mainHeadingColor};
   font-size: 1.2rem;
   align-self: center;
 `;
@@ -69,7 +69,7 @@ export const Heading = styled.h2`
 
 export const MediaButton = styled.button`
   .icon {
-    color: ${(props) => props.theme.common.subTitleColor};
+    color: ${(props) => props.theme.common.subHeadingColor};
   }
 `;
 
@@ -93,7 +93,7 @@ export const AboutItem = styled.li`
   font-weight: 500;
 
   &:not(:last-of-type) {
-    border-bottom: 1px solid ${(props) => props.theme.chatRoom.profileDividerColor};
+    border-bottom: 1px solid ${(props) => props.theme.common.primaryColor};
   }
 `;
 

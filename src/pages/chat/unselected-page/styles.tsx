@@ -10,7 +10,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-bottom: 6px solid ${(props) => props.theme.common.notificationBg};
+  border-bottom: 6px solid ${(props) => props.theme.common.tertiaryColor};
 `;
 
 export const ImageWrapper = styled.div`
@@ -25,14 +25,14 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.h1`
-  color: ${props => props.theme.common.titleColor};
+  color: ${props => props.theme.common.mainHeadingColor};
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 10px;
 `;
 
 export const Text = styled.p`
-  color: ${props => props.theme.common.subTitleColor};
+  color: ${props => props.theme.common.subHeadingColor};
   font-size: 0.9rem;
   font-weight: 500;
   max-width: 500px;

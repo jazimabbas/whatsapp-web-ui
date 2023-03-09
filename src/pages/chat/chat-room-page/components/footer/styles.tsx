@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 `;
 
 export const iconCommonStyles = css`
-  color: ${(props) => props.theme.common.subTitleColor};
+  color: ${(props) => props.theme.common.subHeadingColor};
 `;
 
 export const IconsWrapper = styled.div`
@@ -63,8 +63,8 @@ export const Button = styled.button<{ readonly showIcon: boolean }>`
 export const Input = styled.input`
   /* background: white; */
   /* color: rgb(74, 74, 74); */
-  background: ${(props) => props.theme.common.containerColor};
-  color: ${(props) => props.theme.common.subTitleColor};
+  background: ${(props) => props.theme.common.secondaryColor};
+  color: ${(props) => props.theme.common.subHeadingColor};
 
   padding: 20px 10px;
   border-radius: 10px;
@@ -78,7 +78,7 @@ export const Input = styled.input`
 
   &::placeholder {
     /* color: rgb(74, 74, 74); */
-    color: ${(props) => props.theme.common.subTitleColor};
+    color: ${(props) => props.theme.common.subHeadingColor};
     font-size: 0.9rem;
   }
 
