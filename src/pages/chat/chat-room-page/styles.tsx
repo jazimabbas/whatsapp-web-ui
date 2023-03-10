@@ -23,7 +23,7 @@ export const Background = styled.div`
   bottom: 0;
   opacity: 0.05;
   z-index: 1;
-  background: url("/assets/images/bg-chat-room-light.png") ${(props) => props.theme.chatRoom.bg};
+  background: url("/assets/images/bg-chat-room.png") ${(props) => props.theme.chatRoom.bg};
 `;
 
 export const FooterContainer = styled.div`

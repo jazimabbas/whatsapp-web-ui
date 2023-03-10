@@ -7,6 +7,7 @@ const LoaderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: ${(props) => props.theme.splash.bg};
 `;
 
 export default function MainPageLoader() {

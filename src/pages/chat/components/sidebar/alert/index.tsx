@@ -10,7 +10,7 @@ export default function SidebarAlert() {
   return (
     <>
       <AlertContainer>
-        <CloseIcon src="/assets/images/close.png" onClick={() => setIsClose(true)} />
+        <CloseIcon onClick={() => setIsClose(true)} />
         <IconWrapper>
           <Icon id="noWifi" className="icon" />
         </IconWrapper>

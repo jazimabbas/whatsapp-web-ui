@@ -1,3 +1,4 @@
+import { BiX } from "react-icons/bi";
 import styled from "styled-components";
 
 export const AlertContainer = styled.div`
@@ -13,20 +14,21 @@ export const AlertContainer = styled.div`
   }
 `;
 
-export const CloseIcon = styled.img`
+export const CloseIcon = styled(BiX)`
   position: absolute;
-  top: 15px;
+  top: 5px;
   right: 15px;
   cursor: pointer;
-  width: 15px;
-  height: 15px;
+  width: 30px;
+  height: 30px;
+  color: ${props => props.theme.alert.closeIconColor}
 `;
 
 export const IconWrapper = styled.div`
   margin-right: 10px;
 
   .icon {
-    color: ${(props) => props.theme.common.secondaryColor} !important;
+    color: ${(props) => props.theme.alert.iconContainerColor} !important;
   }
 `;
 
@@ -38,12 +40,12 @@ export const Text = styled.p`
   &:first-of-type {
     font-size: 1rem;
     margin-bottom: 5px;
-    color: ${props => props.theme.common.mainHeadingColor};
+    color: ${(props) => props.theme.common.mainHeadingColor};
   }
 
   &:last-of-type {
     font-size: 0.85rem;
-    color: ${props => props.theme.common.subHeadingColor};
+    color: ${(props) => props.theme.common.subHeadingColor};
     line-height: 17px;
   }
 `;

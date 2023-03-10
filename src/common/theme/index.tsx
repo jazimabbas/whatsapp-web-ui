@@ -16,8 +16,7 @@ export const lightTheme: DefaultTheme = {
     bg: "#dddbd1",
     contentBoxShadowColor: "0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2)",
   },
-  sidebar: {
-  },
+  sidebar: {},
   search: {
     iconColor: "#00a884",
   },
@@ -49,6 +48,7 @@ export const lightTheme: DefaultTheme = {
   alert: {
     infoColor: "#9de1fe",
     iconContainerColor: "white",
+    closeIconColor: "#00000099",
   },
   badge: {
     textColor: "#000",

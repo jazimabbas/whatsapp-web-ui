@@ -16,8 +16,7 @@ declare module "styled-components" {
       bg: string;
       contentBoxShadowColor: string;
     };
-    sidebar: {
-    };
+    sidebar: {};
     search: {
       iconColor: string;
     };
@@ -49,6 +48,7 @@ declare module "styled-components" {
     alert: {
       infoColor: string;
       iconContainerColor: string;
+      closeIconColor: string;
     };
     badge: {
       textColor: string;

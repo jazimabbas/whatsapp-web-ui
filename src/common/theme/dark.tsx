@@ -48,6 +48,7 @@ export const darkTheme: DefaultTheme = {
   alert: {
     infoColor: "#085373",
     iconContainerColor: "rgba(241, 241, 242, 0.8)",
+    closeIconColor: "rgba(241, 241, 242, 0.92)",
   },
   badge: {
     textColor: "rgba(241, 241, 242, 0.92)",
