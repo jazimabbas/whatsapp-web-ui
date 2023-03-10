@@ -13,15 +13,15 @@ export const darkTheme: DefaultTheme = {
     iconColor: "rgba(241, 241, 242, 0.88)",
   },
   layout: {
-    bg: "#dddbd1",
+    bg: "#090F13",
     contentBoxShadowColor: "0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2)",
   },
   sidebar: {},
   search: {
-    iconColor: "#00a884",
+    iconColor: "rgba(241, 241, 242, 0.50)",
   },
   options: {
-    bg: "#d5d5d5",
+    bg: "rgb(19, 28, 33)",
     boxShadow: "0 2px 5px 0 #00000042, 0 2px 10px 0 rgba(0, 0, 0, 0.16)",
   },
   unselectedChat: {
@@ -35,19 +35,19 @@ export const darkTheme: DefaultTheme = {
     profileActionColor: "rgb(223, 51, 51)",
   },
   common: {
-    borderColor: "#dadada",
-    primaryColor: "rgb(237, 237, 237)",
-    mainHeadingColor: "#000000",
-    subHeadingColor: "#00000099",
-    secondaryColor: "white",
-    tertiaryColor: "#25D366",
+    borderColor: "#3C4247",
+    primaryColor: "#323739",
+    mainHeadingColor: "rgba(241, 241, 242, 0.88)",
+    subHeadingColor: "rgb(166, 168, 170)",
+    secondaryColor: "rgb(19, 28, 33)",
+    tertiaryColor: "rgb(0, 175, 156)",
     readIconColor: "#0da9e5",
     unreadIconColor: "#b3b3b3",
     headerIconColor: "rgb(145, 145, 145)",
   },
   alert: {
-    infoColor: "#9de1fe",
-    iconContainerColor: "white",
+    infoColor: "#085373",
+    iconContainerColor: "rgba(241, 241, 242, 0.8)",
   },
   badge: {
     textColor: "#000",
