@@ -8,7 +8,7 @@ export const Search = styled(SearchField)`
 `;
 
 export const Content = styled.div`
-  background: white;
+  background: ${props => props.theme.common.secondaryColor};
   height: 100%;
   padding-top: 5pc;
   color: ${props => props.theme.common.mainHeadingColor};

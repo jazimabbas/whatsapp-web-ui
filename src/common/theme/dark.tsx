@@ -50,19 +50,19 @@ export const darkTheme: DefaultTheme = {
     iconContainerColor: "rgba(241, 241, 242, 0.8)",
   },
   badge: {
-    textColor: "#000",
-    bgColor: "#e1f2fa",
+    textColor: "rgba(241, 241, 242, 0.92)",
+    bgColor: "rgb(30, 42, 48)",
   },
   sentMessage: {
-    textColor: "#000",
-    bgColor: "#dbf8c6",
+    textColor: "rgba(241, 241, 242, 0.95)",
+    bgColor: "rgb(5, 97, 98)",
   },
   receivedMessage: {
-    textColor: "#000",
-    bgColor: "white",
+    textColor: "rgba(241, 241, 242, 0.95)",
+    bgColor: "rgb(38, 45, 49)",
   },
   encryptionMessage: {
-    bgColor: "#fdf4c5",
-    textColor: "#000",
+    bgColor: "rgb(32, 39, 43)",
+    textColor: "rgb(250, 217, 100)",
   },
 };

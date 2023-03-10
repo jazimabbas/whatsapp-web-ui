@@ -91,6 +91,7 @@ export const AboutItem = styled.li`
   margin-bottom: 5px;
   cursor: pointer;
   font-weight: 500;
+  color: ${props => props.theme.common.subHeadingColor};
 
   &:not(:last-of-type) {
     border-bottom: 1px solid ${(props) => props.theme.common.primaryColor};
