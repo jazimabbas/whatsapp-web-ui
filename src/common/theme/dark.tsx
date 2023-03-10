@@ -25,7 +25,7 @@ export const darkTheme: DefaultTheme = {
     boxShadow: "0 2px 5px 0 #00000042, 0 2px 10px 0 rgba(0, 0, 0, 0.16)",
   },
   unselectedChat: {
-    bg: "#f8f9fa",
+    bg: "rgb(38, 45, 49)",
   },
   chatRoom: {
     bg: "#e4dcd4",

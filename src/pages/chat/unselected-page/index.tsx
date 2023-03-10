@@ -7,7 +7,7 @@ export default function UnSelectedChatPage() {
     <ChatLayout>
       <Container>
         <ImageWrapper>
-          <Image src="/assets/images/entry-image.webp" />
+          <Image src="/assets/images/entry-image-dark.png" />
         </ImageWrapper>
         <Title> WhatsApp Web </Title>
         <Text>
