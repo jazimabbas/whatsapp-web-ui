@@ -2,7 +2,7 @@ import { DefaultTheme } from "styled-components";
 
 export const darkTheme: DefaultTheme = {
   splash: {
-    bg: "rgb(18.6, 28.22, 33.4)",
+    bg: "rgb(18, 28, 33)",
     gradient:
       "linear-gradient( 90deg, rgba(18.6, 28.22, 33.4, .5) 0, rgba(18.6, 28.22, 33.4, .5) 33.33%, rgba(18.6, 28.22, 33.4, 0) 44.1%, rgba(18.6, 28.22, 33.4, 0) 55.8%, rgba(18.6, 28.22, 33.4, .5) 66.66%, rgba(18.6, 28.22, 33.4, .5))",
     logoFill: "rgb(108, 113, 117)",
