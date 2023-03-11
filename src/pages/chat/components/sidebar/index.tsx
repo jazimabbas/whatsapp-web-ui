@@ -1,8 +1,13 @@
+import { useNavigate } from "react-router-dom";
+import { BsFillMoonFill, BsMoon } from "react-icons/bs";
+
 import SidebarAlert from "./alert";
 import InboxContact from "./contacts";
 import OptionsMenu from "../option-menu";
 import SearchField from "../search-field";
 import Icon from "common/components/icons";
+import { useAppTheme } from "common/theme";
+import { Inbox } from "common/types/common.type";
 import { useChatContext } from "pages/chat/context/chat";
 import {
   Actions,
@@ -11,13 +16,17 @@ import {
   Header,
   ImageWrapper,
   SidebarContainer,
+  ThemeIconContainer,
 } from "./styles";
-import { Inbox } from "common/types/common.type";
-import { useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
+  const theme = useAppTheme();
   const navigate = useNavigate();
   const chatCtx = useChatContext();
+
+  const handleChangeThemeMode = () => {
+    theme.onChangeThemeMode();
+  };
 
   const handleChangeChat = (chat: Inbox) => {
     chatCtx.onChangeChat(chat);
@@ -31,10 +40,13 @@ export default function Sidebar() {
           <Avatar src="/assets/images/girl.jpeg" />
         </ImageWrapper>
         <Actions>
-          <button className="sidebar__action" aria-label="Status">
+          <ThemeIconContainer onClick={handleChangeThemeMode}>
+            {theme.mode === "light" ? <BsMoon /> : <BsFillMoonFill />}
+          </ThemeIconContainer>
+          <button aria-label="Status">
             <Icon id="status" className="icon" />
           </button>
-          <button className="sidebar__action" aria-label="New chat">
+          <button aria-label="New chat">
             <Icon id="chat" className="icon" />
           </button>
           <OptionsMenu

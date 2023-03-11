@@ -60,6 +60,15 @@ export const Actions = styled.div`
   }
 `;
 
+export const ThemeIconContainer = styled.div`
+  svg {
+    margin-bottom: 2px;
+    width: 20px;
+    height: 20px;
+    fill: ${(props) => props.theme.common.headerIconColor};
+  }
+`;
+
 export const ContactContainer = styled.div`
   flex: 1;
   overflow-y: scroll;
