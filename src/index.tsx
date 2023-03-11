@@ -1,17 +1,15 @@
 import { Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import { ThemeProvider } from "styled-components";
 import "./index.css";
 import App from "App";
-import { lightTheme } from "common/theme";
+import AppThemeProvider from "common/theme";
 import { MainPageLoader } from "common/components/loader";
-import { darkTheme } from "common/theme/dark";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
-  <ThemeProvider theme={darkTheme}>
+  <AppThemeProvider>
     <Suspense fallback={<MainPageLoader />}>
       <App />
     </Suspense>
-  </ThemeProvider>
+  </AppThemeProvider>
 );
