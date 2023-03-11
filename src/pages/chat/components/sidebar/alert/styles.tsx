@@ -21,7 +21,7 @@ export const CloseIcon = styled(BiX)`
   cursor: pointer;
   width: 30px;
   height: 30px;
-  color: ${props => props.theme.alert.closeIconColor}
+  color: ${(props) => props.theme.alert.closeIconColor};
 `;
 
 export const IconWrapper = styled.div`

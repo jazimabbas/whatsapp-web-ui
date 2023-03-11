@@ -8,10 +8,10 @@ export const Search = styled(SearchField)`
 `;
 
 export const Content = styled.div`
-  background: ${props => props.theme.common.secondaryColor};
+  background: ${(props) => props.theme.common.secondaryColor};
   height: 100%;
   padding-top: 5pc;
-  color: ${props => props.theme.common.mainHeadingColor};
+  color: ${(props) => props.theme.common.mainHeadingColor};
   text-align: center;
   font-size: 0.85rem;
 `;

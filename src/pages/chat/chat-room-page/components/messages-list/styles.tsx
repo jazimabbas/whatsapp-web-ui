@@ -76,8 +76,8 @@ export const MessageGroup = styled.div`
     height: 0;
     top: 0;
     left: -8px;
-    border-top: 6px solid ${props => props.theme.receivedMessage.bgColor};
-    border-right: 6px solid ${props => props.theme.receivedMessage.bgColor};
+    border-top: 6px solid ${(props) => props.theme.receivedMessage.bgColor};
+    border-right: 6px solid ${(props) => props.theme.receivedMessage.bgColor};
     border-bottom: 6px solid transparent;
     border-left: 6px solid transparent;
   }

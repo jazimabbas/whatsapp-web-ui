@@ -25,14 +25,14 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.h1`
-  color: ${props => props.theme.common.mainHeadingColor};
+  color: ${(props) => props.theme.common.mainHeadingColor};
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 10px;
 `;
 
 export const Text = styled.p`
-  color: ${props => props.theme.common.subHeadingColor};
+  color: ${(props) => props.theme.common.subHeadingColor};
   font-size: 0.9rem;
   font-weight: 500;
   max-width: 500px;

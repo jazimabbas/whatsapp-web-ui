@@ -40,7 +40,7 @@ export const SearchWrapper = styled.div`
 `;
 
 export const IconContainer = styled.div`
-  color: ${props => props.theme.search.iconColor};
+  color: ${(props) => props.theme.search.iconColor};
   position: absolute;
   left: 20px;
   top: 50%;
@@ -51,8 +51,8 @@ export const IconContainer = styled.div`
 `;
 
 export const Input = styled.input`
-  background: ${props => props.theme.common.primaryColor};
-  color: ${props => props.theme.common.subHeadingColor};
+  background: ${(props) => props.theme.common.primaryColor};
+  color: ${(props) => props.theme.common.subHeadingColor};
   padding-left: 60px;
   border-radius: 10px;
   width: 100%;
@@ -60,7 +60,7 @@ export const Input = styled.input`
 
   &::placeholder {
     /* color: rgb(74, 74, 74); */
-    color: ${props => props.theme.common.subHeadingColor};
+    color: ${(props) => props.theme.common.subHeadingColor};
   }
 
   &:focus {
