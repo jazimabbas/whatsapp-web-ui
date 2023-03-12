@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+# WhatsApp Web 
+WhatsApp Web UI built with React, TypeScript, and Styled-Components.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+- [Screenshots](#screenshots)
+- [Running the Application](#running-the-application)
+- [Project Structure](#project-structure)
+- [Theming](#theming)
+- [Contribution](#contribution)
+- [Support Me](#support-me)
 
-## Available Scripts
+## Screenshots
+![entry](https://user-images.githubusercontent.com/44744039/224526394-642e3187-57c7-47e2-995e-3f67fa52eeea.png)
+![dark-ui](https://user-images.githubusercontent.com/44744039/224526440-b4eb6a54-4dda-430c-a681-286f5b406fe7.png)
+![dark-search](https://user-images.githubusercontent.com/44744039/224526449-02bc4f77-7071-415e-98b8-3ade74c9967b.png)
+![light-chat](https://user-images.githubusercontent.com/44744039/224526453-7b835f09-e25e-4bdf-894f-c1b253a8c31d.png)
+![light-profile](https://user-images.githubusercontent.com/44744039/224526456-40c82430-70cb-44e3-82ac-182efde8255f.png)
 
-In the project directory, you can run:
 
-### `npm start`
+## Running the Application
+To run the application, follow these steps:
+1. Clone this repository to your local machine
+2. Open the terminal and navigate to the project directory
+3. Run `npm install` to install the dependencies
+4. Run `npm start` to start the application
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Structure
+The `common` code which can be reused in multiple parts of the application can be found in the common folder. This includes components, hooks, themes, and types. <br />
+The `pages` folder contains the main pages of the application, such as the chat list and chat window. <br />
+The `routes` folder contains the routes for the application.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Theming
+The application supports both light and dark themes. The theme state is managed using the Context API, which can be found in the common/themes folder. If you want to customize the existing theme, you can adjust the light and dark themes according to your needs. <br />
+You can add new theme as well. Its very easy to setup. Just create a new file and define all the Theme Properties and then switch that theme in the AppThemeProvider. That's it.
 
-### `npm test`
+## Contribution
+If you would like to contribute to this project, you can clone the repository and make your changes. Before pushing your changes, make sure to run `npm run lint` to check for any linting issues. If any issues are found, you can run `npm run prettier` to fix them.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Support Me
+If you find this project useful or would like to support my work, you can buy me a coffee at buymeacoffee.com. Your contribution will help me continue to improve this project and create new ones in the future. <br />
+You can also show your support by giving this repository a star on GitHub. This will help more people discover and use the project, and let me know that you find it useful. To star the repository, simply click the "Star" button at the top of the page.
