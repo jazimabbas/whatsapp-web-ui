@@ -37,5 +37,5 @@ You can add new theme as well. Its very easy to setup. Just create a new file an
 If you would like to contribute to this project, you can clone the repository and make your changes. Before pushing your changes, make sure to run `npm run lint` to check for any linting issues. If any issues are found, you can run `npm run prettier` to fix them.
 
 ## Support Me
-If you find this project useful or would like to support my work, you can buy me a coffee at buymeacoffee.com. Your contribution will help me continue to improve this project and create new ones in the future. <br />
+If you find this project useful or would like to support my work, you can [buy me a coffee here](https://www.buymeacoffee.com/jazimabbas). Your contribution will help me continue to improve this project and create new ones in the future. <br />
 You can also show your support by giving this repository a star on GitHub. This will help more people discover and use the project, and let me know that you find it useful. To star the repository, simply click the "Star" button at the top of the page.
