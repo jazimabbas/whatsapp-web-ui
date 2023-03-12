@@ -15,11 +15,19 @@ const AppThemeContext = createContext<Theme>({ mode: "dark", onChangeThemeMode: 
 
 function AppThemeProvider(props: { children: any }) {
   const { children } = props;
-  const [themeMode, setThemeMode] = useState<ThemeMode>("dark");
+  const [themeMode, setThemeMode] = useState<ThemeMode>(() => {
+    const theme = window.localStorage.getItem("theme");
+    return theme ?? ("dark" as any);
+  });
 
   function handleChangeThemeMode(): void {
-    if (themeMode === "dark") setThemeMode("light");
-    else setThemeMode("dark");
+    let theme: ThemeMode;
+
+    if (themeMode === "dark") theme = "light";
+    else theme = "dark";
+
+    window.localStorage.setItem("theme", theme);
+    setThemeMode(theme);
   }
 
   function getTheme(): DefaultTheme {
